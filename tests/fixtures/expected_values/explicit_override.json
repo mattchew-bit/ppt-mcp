@@ -1,0 +1,1180 @@
+{
+  "fixture": "explicit_override",
+  "source": "explicit_override.pptx",
+  "generated_by": "tests/fixtures/authoring/extract_expected.py (PowerPoint COM, effective values)",
+  "generated_on": "2026-07-04",
+  "powerpoint_version": "16.0",
+  "slide_size_pt": {
+    "width": 960.0,
+    "height": 540.0
+  },
+  "slides": [
+    {
+      "index": 1,
+      "layout_name": "Title and Content",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Transformation",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 36.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                },
+                {
+                  "text": " ",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 40.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                },
+                {
+                  "text": "program",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 40.0,
+                    "bold": true,
+                    "italic": true,
+                    "color_rgb": "E2A33D"
+                  }
+                },
+                {
+                  "text": " update",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 40.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 143.75,
+            "width_pt": 828.0,
+            "height_pt": 342.63,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8211,
+                "char": "–",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Baseline scope confirmed with all sponsors",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8211,
+                "char": "–",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Wave one delivery is trending ahead of plan",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 23.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 4.0,
+              "space_after_pt": 7.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9632,
+                "char": "■",
+                "font_name": "Arial",
+                "color_rgb": "FF6B35",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Benefits case revalidated by finance",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 16.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "FF6B35"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_pt": 12.0,
+              "space_after_pt": 15.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8211,
+                "char": "–",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Decision needed on the second wave start",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 5,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 10003,
+                "char": "✓",
+                "font_name": "Arial",
+                "color_rgb": "6B9F59",
+                "color_source": "explicit",
+                "relative_size": 1.0
+              },
+              "runs": [
+                {
+                  "text": "Completed workstreams archived this month",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 6,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Risks and issues log reset for wave two",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 7,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8211,
+                "char": "–",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Change network extended to every site",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 8,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 4.0,
+              "space_after_pt": 7.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9632,
+                "char": "■",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Local champions nominated by month end",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 16.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "layout_name": "Title and Content",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Vendor consolidation detail",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 40.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 143.75,
+            "width_pt": 828.0,
+            "height_pt": 342.63,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8211,
+                "char": "–",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Vendor consolidation",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 21.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                },
+                {
+                  "text": " reduces ",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                },
+                {
+                  "text": "overhead",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 15.0,
+                    "bold": false,
+                    "italic": true,
+                    "color_rgb": "7C5CA6"
+                  }
+                },
+                {
+                  "text": " across regions",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 4.0,
+              "space_after_pt": 7.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9632,
+                "char": "■",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Preferred supplier list trimmed to eight names",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 16.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 4.0,
+              "space_after_pt": 7.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9632,
+                "char": "■",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Standard terms applied to every renewal",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 16.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8211,
+                "char": "–",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Savings redirected into the delivery pods",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 19.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "layout_name": "Section Header",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 65.5,
+            "top_pt": 134.63,
+            "width_pt": 828.0,
+            "height_pt": 224.62,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Wave ",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 60.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                },
+                {
+                  "text": "two",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 60.0,
+                    "bold": true,
+                    "italic": true,
+                    "color_rgb": "A63D57"
+                  }
+                },
+                {
+                  "text": " priorities",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 60.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Text Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 2,
+          "geometry": {
+            "left_pt": 65.5,
+            "top_pt": 361.38,
+            "width_pt": 828.0,
+            "height_pt": 118.12,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 5.0,
+              "space_after_pt": 9.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Scale what worked, retire what did not",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 17.5,
+                    "bold": false,
+                    "italic": true,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "layout_name": "Title Only",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Decision summary",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 40.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatNoteDecision",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 140.0,
+            "width_pt": 340.0,
+            "height_pt": 78.76,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Steering committee approved the revised case",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 21.0,
+                    "bold": true,
+                    "italic": true,
+                    "color_rgb": "4A1942"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 6.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Funding released for the next two quarters",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 12.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "6B9F59"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatNoteConditions",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 260.0,
+            "width_pt": 340.0,
+            "height_pt": 44.83,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Conditions attached to the approval",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 13.0,
+                    "bold": false,
+                    "italic": true,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Benefits tracking reports monthly",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatCaptionRecord",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 470.0,
+            "width_pt": 400.0,
+            "height_pt": 24.84,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Recorded at the June steering committee",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 14.5,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "8C5E93"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatShapeApprove",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 470.0,
+            "top_pt": 150.0,
+            "width_pt": 140.0,
+            "height_pt": 90.0,
+            "rotation": 0.0,
+            "auto_shape_type": 5,
+            "adjustments": [
+              0.4
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 3.0,
+            "dash_style": 1,
+            "dash_style_name": "solid",
+            "color_rgb": "C0504D"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "DDEBF7"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Approve",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatShapeReview",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 630.0,
+            "top_pt": 150.0,
+            "width_pt": 140.0,
+            "height_pt": 90.0,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 2.25,
+            "dash_style": 4,
+            "dash_style_name": "dash",
+            "color_rgb": "1F4E79"
+          },
+          "fill": {
+            "visible": true,
+            "type": 3,
+            "type_name": "gradient"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Review",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "FDFBF7"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatShapeDeploy",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 790.0,
+            "top_pt": 150.0,
+            "width_pt": 140.0,
+            "height_pt": 90.0,
+            "rotation": 0.0,
+            "auto_shape_type": 9,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "2E86AB"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Deploy",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "FDFBF7"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "anomalies": []
+}

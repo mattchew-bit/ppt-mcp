@@ -1,0 +1,1415 @@
+{
+  "fixture": "layout_override",
+  "source": "layout_override.pptx",
+  "generated_by": "tests/fixtures/authoring/extract_expected.py (PowerPoint COM, effective values)",
+  "generated_on": "2026-07-04",
+  "powerpoint_version": "16.0",
+  "slide_size_pt": {
+    "width": 960.0,
+    "height": 540.0
+  },
+  "slides": [
+    {
+      "index": 1,
+      "layout_name": "Fixture Content A",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Portfolio review",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": true,
+                    "italic": true,
+                    "color_rgb": "7C5CA6"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 143.75,
+            "width_pt": 828.0,
+            "height_pt": 342.63,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 12.0,
+              "space_within": 1.3,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9670,
+                "char": "◆",
+                "font_name": "Arial",
+                "color_rgb": "2E5E4E",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Core segment holds share in a flat market",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 21.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "2E5E4E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 3.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9642,
+                "char": "▪",
+                "font_name": "Arial",
+                "color_rgb": "C0504D",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Volume steady while list prices firmed",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 17.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 3,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.05,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 215,
+                "char": "×",
+                "font_name": "Arial",
+                "color_rgb": "1A1A2E",
+                "color_source": "follow_text",
+                "relative_size": 1.0
+              },
+              "runs": [
+                {
+                  "text": "Discounting concentrated in two accounts",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 12.0,
+              "space_within": 1.3,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9670,
+                "char": "◆",
+                "font_name": "Arial",
+                "color_rgb": "2E5E4E",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Growth segment doubled its pipeline",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 21.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "2E5E4E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 5,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 3.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9642,
+                "char": "▪",
+                "font_name": "Arial",
+                "color_rgb": "C0504D",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Six pilot programs converted to contracts",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 17.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 6,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 12.0,
+              "space_within": 1.3,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9670,
+                "char": "◆",
+                "font_name": "Arial",
+                "color_rgb": "2E5E4E",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Legacy products enter managed decline",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 21.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "2E5E4E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 7,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 3.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9642,
+                "char": "▪",
+                "font_name": "Arial",
+                "color_rgb": "C0504D",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Support commitments honored through next year",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 17.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "layout_name": "Fixture Content B",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Financial summary",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 26.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "E2A33D"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 143.75,
+            "width_pt": 828.0,
+            "height_pt": 342.63,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 4,
+              "alignment_name": "justify",
+              "space_before_pt": 6.0,
+              "space_after_pt": 13.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 187,
+                "char": "»",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "explicit",
+                "relative_size": 1.1
+              },
+              "runs": [
+                {
+                  "text": "Revenue expanded ahead of the annual plan",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 15.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9702,
+                "char": "◦",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Services mix improved gross margin",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 12.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 1,
+              "alignment": 4,
+              "alignment_name": "justify",
+              "space_before_pt": 6.0,
+              "space_after_pt": 13.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 187,
+                "char": "»",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "explicit",
+                "relative_size": 1.1
+              },
+              "runs": [
+                {
+                  "text": "Operating costs held below budget",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 15.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9702,
+                "char": "◦",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Hiring deferred in two support functions",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 12.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 5,
+              "level": 1,
+              "alignment": 4,
+              "alignment_name": "justify",
+              "space_before_pt": 6.0,
+              "space_after_pt": 13.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 187,
+                "char": "»",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "explicit",
+                "relative_size": 1.1
+              },
+              "runs": [
+                {
+                  "text": "Cash conversion strengthened quarter over quarter",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 15.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 6,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9702,
+                "char": "◦",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Receivables aging returned to target",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 12.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 7,
+              "level": 1,
+              "alignment": 4,
+              "alignment_name": "justify",
+              "space_before_pt": 6.0,
+              "space_after_pt": 13.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 187,
+                "char": "»",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "explicit",
+                "relative_size": 1.1
+              },
+              "runs": [
+                {
+                  "text": "Full year guidance affirmed at the midpoint",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 15.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 8,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9702,
+                "char": "◦",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Sensitivity range narrowed on stable demand",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 12.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "layout_name": "Fixture Content A",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Execution roadmap",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": true,
+                    "italic": true,
+                    "color_rgb": "7C5CA6"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 143.75,
+            "width_pt": 828.0,
+            "height_pt": 342.63,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 12.0,
+              "space_within": 1.3,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9670,
+                "char": "◆",
+                "font_name": "Arial",
+                "color_rgb": "2E5E4E",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Phase one stabilizes the operating baseline",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 21.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "2E5E4E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 3.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9642,
+                "char": "▪",
+                "font_name": "Arial",
+                "color_rgb": "C0504D",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Critical process gaps closed by design sprints",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 17.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 12.0,
+              "space_within": 1.3,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9670,
+                "char": "◆",
+                "font_name": "Arial",
+                "color_rgb": "2E5E4E",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Phase two scales the delivery model",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 21.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "2E5E4E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 3.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9642,
+                "char": "▪",
+                "font_name": "Arial",
+                "color_rgb": "C0504D",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Playbooks rolled out to every region",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 17.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "C0504D"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 5,
+              "level": 3,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.05,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 215,
+                "char": "×",
+                "font_name": "Arial",
+                "color_rgb": "1A1A2E",
+                "color_source": "follow_text",
+                "relative_size": 1.0
+              },
+              "runs": [
+                {
+                  "text": "Certification required for pod leads",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 6,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 12.0,
+              "space_within": 1.3,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9670,
+                "char": "◆",
+                "font_name": "Arial",
+                "color_rgb": "2E5E4E",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Phase three institutionalizes improvement",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 21.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "2E5E4E"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "layout_name": "Fixture Content B",
+      "master_name": "FixtureBase",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 28.75,
+            "width_pt": 828.0,
+            "height_pt": 104.38,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Delivery checkpoints",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 26.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "E2A33D"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Content Placeholder 2",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 66.0,
+            "top_pt": 143.75,
+            "width_pt": 828.0,
+            "height_pt": 342.63,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 4,
+              "alignment_name": "justify",
+              "space_before_pt": 6.0,
+              "space_after_pt": 13.0,
+              "space_within": 1.15,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 187,
+                "char": "»",
+                "font_name": "Arial",
+                "color_rgb": "1F4E79",
+                "color_source": "explicit",
+                "relative_size": 1.1
+              },
+              "runs": [
+                {
+                  "text": "Milestones tracked against the master schedule",
+                  "font": {
+                    "name": "Times New Roman",
+                    "size_pt": 15.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1F4E79"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 6.0,
+              "space_within": 1.1,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 9702,
+                "char": "◦",
+                "font_name": "Arial",
+                "color_rgb": "3F3F66",
+                "color_source": "follow_text",
+                "relative_size": 0.8
+              },
+              "runs": [
+                {
+                  "text": "Escalations reviewed at the weekly forum",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 12.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3F3F66"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatNoteGovernance",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 500.0,
+            "top_pt": 150.0,
+            "width_pt": 300.0,
+            "height_pt": 50.89,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Checkpoint owners rotate monthly",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Minutes filed within two days",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatCaptionDates",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 500.0,
+            "top_pt": 250.0,
+            "width_pt": 300.0,
+            "height_pt": 29.08,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "All dates are working assumptions",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatNoteReadiness",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 420.0,
+            "width_pt": 380.0,
+            "height_pt": 50.89,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Readiness reviews precede every gate",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Exceptions require sponsor approval",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatShapeGate1",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 500.0,
+            "top_pt": 320.0,
+            "width_pt": 140.0,
+            "height_pt": 80.0,
+            "rotation": 0.0,
+            "auto_shape_type": 5,
+            "adjustments": [
+              0.28
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 2.25,
+            "dash_style": 4,
+            "dash_style_name": "dash",
+            "color_rgb": "A63D57"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "F2E8D8"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Gate 1",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "FDFBF7"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FloatShapeGate2",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 660.0,
+            "top_pt": 320.0,
+            "width_pt": 140.0,
+            "height_pt": 80.0,
+            "rotation": 0.0,
+            "auto_shape_type": 52,
+            "adjustments": [
+              0.5
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 1.75,
+            "dash_style": 8,
+            "dash_style_name": "long_dash_dot",
+            "color_rgb": "1F4E79"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "3E8FB0"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 2,
+              "alignment_name": "center",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Gate 2",
+                  "font": {
+                    "name": "Arial",
+                    "size_pt": 18.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "1A1A2E"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "anomalies": []
+}
