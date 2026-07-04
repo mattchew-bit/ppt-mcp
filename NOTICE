@@ -1,0 +1,31 @@
+NOTICE
+======
+
+ppt-mcp
+Copyright (c) 2025 GongRzhe
+Licensed under the MIT License (see LICENSE).
+
+Third-party attribution
+-----------------------
+
+The slide-clone relationship-rewriting semantics in utils/clone_utils.py
+are re-implemented from (not copied out of) the following MIT-licensed
+sources:
+
+* pptx-automizer (https://github.com/singerla/pptx-automizer)
+  Copyright (c) singerla (github.com/singerla) and contributors.
+  MIT License.
+  Ported semantics: per-relationship-type handlers (image / media /
+  hyperlink) and the "assertRelatedContent" pattern -- a final safety
+  sweep that copies any remaining unhandled relationship target so no
+  broken relationship survives the clone.
+
+* python-pptx, pull request #1141
+  (https://github.com/scanny/python-pptx/pull/1141)
+  python-pptx Copyright (c) 2013 Steve Canny and contributors.
+  MIT License.
+  Ported semantics: SlidePart clone with relationships re-created in
+  ascending rId order.
+
+No source code was copied from these projects; the implementation in this
+repository is original Python written against the python-pptx API.

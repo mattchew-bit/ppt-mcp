@@ -2,7 +2,7 @@
 [![smithery badge](https://smithery.ai/badge/@GongRzhe/Office-PowerPoint-MCP-Server)](https://smithery.ai/server/@GongRzhe/Office-PowerPoint-MCP-Server)
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
-A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 32 powerful tools organized into 11 specialized modules, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
+A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 43 powerful tools organized into 12 specialized modules, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
 
 ----
 
@@ -194,9 +194,9 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 
 ## 🚀 What's New in v2.0
 
-### **Comprehensive Tool Suite (32 Tools)**
-- **Complete PowerPoint manipulation** with 34 specialized tools
-- **11 organized modules** covering all aspects of presentation creation
+### **Comprehensive Tool Suite (43 Tools)**
+- **Complete PowerPoint manipulation** with 43 specialized tools
+- **12 organized modules** covering all aspects of presentation creation
 - **Enhanced parameter handling** with comprehensive validation
 - **Intelligent defaults** and operation-based interfaces
 
@@ -208,14 +208,14 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 - **Complete presentation generation** from template sequences
 
 ### **Modular Architecture**
-- **11 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, and transition tools
+- **12 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, and clone tools
 - **Better maintainability** with separated concerns
 - **Easier extensibility** for adding new features
 - **Cleaner code structure** with shared utilities
 
 ## Available Tools
 
-The server provides **34 specialized tools** organized into the following categories:
+The server provides **43 specialized tools** organized into the following categories:
 
 ### **Presentation Management (7 tools)**
 1. **create_presentation** - Create new presentations
@@ -262,6 +262,10 @@ The server provides **34 specialized tools** organized into the following catego
 32. **add_connector** - Add connector lines/arrows between points on slides
 33. **update_chart_data** - Replace existing chart data with new categories and series
 34. **manage_slide_transitions** - Basic slide transition management
+
+### **Slide Cloning (2 tools)**
+35. **duplicate_slide** - Duplicate a slide within the same presentation with formatting preserved. The duplicate is appended at the end; images, media, and the layout are shared with the source slide; speaker notes are excluded. Charts, SmartArt, OLE objects, and ActiveX controls are not supported in v1.
+36. **copy_slide** - Copy a slide from one loaded presentation into another with full relationship rewriting (images/media re-created and deduplicated by content hash, external hyperlinks preserved, internal slide-jump hyperlinks dropped with text kept, speaker notes excluded). The copied slide is re-bound to the destination layout matched by layout name, so both decks must share template lineage — start the destination from the same template as the source. Charts, SmartArt, OLE objects, and ActiveX controls are not supported in v1.
 
 ## 🌟 Key Unified Tools
 
@@ -896,10 +900,10 @@ Templates automatically adjust to content:
 Office-PowerPoint-MCP-Server/
 ├── ppt_mcp_server.py          # Main consolidated server (v2.0)
 ├── slide_layout_templates.json # 25+ professional slide templates with dynamic features
-├── tools/                     # 11 specialized tool modules (32 tools total)
+├── tools/                     # 12 specialized tool modules (43 tools total)
 │   ├── __init__.py
 │   ├── presentation_tools.py  # Presentation management (7 tools)
-│   ├── content_tools.py       # Content & slides (6 tools)
+│   ├── content_tools.py       # Content & slides (8 tools)
 │   ├── template_tools.py      # Template operations (7 tools)
 │   ├── structural_tools.py    # Tables, shapes, charts (4 tools)
 │   ├── professional_tools.py  # Themes, effects, fonts (3 tools)
@@ -907,15 +911,19 @@ Office-PowerPoint-MCP-Server/
 │   ├── chart_tools.py         # Advanced chart operations (1 tool)
 │   ├── connector_tools.py     # Connector lines/arrows (1 tool)
 │   ├── master_tools.py        # Slide master management (1 tool)
-│   └── transition_tools.py    # Slide transitions (1 tool)
-├── utils/                     # 7 organized utility modules (68+ functions)
+│   ├── transition_tools.py    # Slide transitions (1 tool)
+│   ├── style_tools.py         # Style analysis & profiling (7 tools)
+│   └── clone_tools.py         # Slide cloning (2 tools)
+├── utils/                     # 8 organized utility modules (68+ functions)
 │   ├── __init__.py
 │   ├── core_utils.py          # Error handling & safe operations
 │   ├── presentation_utils.py  # Presentation management utilities
 │   ├── content_utils.py       # Content & slide operations
 │   ├── design_utils.py        # Themes, colors, effects & fonts
 │   ├── template_utils.py      # Template management & dynamic features
-│   └── validation_utils.py    # Text & layout validation
+│   ├── validation_utils.py    # Text & layout validation
+│   ├── style_utils.py         # Style analysis & profiles
+│   └── clone_utils.py         # Slide clone / rel-rewriting engine
 ├── setup_mcp.py              # Interactive setup script
 ├── pyproject.toml            # Updated for v2.0
 └── README.md                 # This documentation
@@ -924,10 +932,10 @@ Office-PowerPoint-MCP-Server/
 ## 🏗️ Architecture Benefits
 
 ### **Modular Design**
-- **7 focused utility modules** with clear responsibilities
-- **11 organized tool modules** for comprehensive coverage
+- **8 focused utility modules** with clear responsibilities
+- **12 organized tool modules** for comprehensive coverage
 - **68+ utility functions** organized by functionality
-- **32 MCP tools** covering all PowerPoint manipulation needs
+- **43 MCP tools** covering all PowerPoint manipulation needs
 - **Clear separation of concerns** for easier development
 
 ### **Code Organization**
