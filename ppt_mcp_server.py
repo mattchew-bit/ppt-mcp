@@ -21,6 +21,7 @@ from tools import (
     register_master_tools,
     register_transition_tools,
     register_style_tools,
+    register_clone_tools,
 )
 
 # Initialize the FastMCP server
@@ -326,6 +327,12 @@ register_transition_tools(
 )
 
 register_style_tools(
+    app,
+    presentations,
+    get_current_presentation_id
+)
+
+register_clone_tools(
     app,
     presentations,
     get_current_presentation_id

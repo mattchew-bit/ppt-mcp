@@ -1,0 +1,70 @@
+NOTICE
+======
+
+ppt-mcp
+Copyright (c) 2025 GongRzhe
+Licensed under the MIT License (see LICENSE).
+
+Third-party attribution
+-----------------------
+
+The slide-clone relationship-rewriting semantics in utils/clone_utils.py
+are re-implemented from (not copied out of) the following MIT-licensed
+sources:
+
+* pptx-automizer (https://github.com/singerla/pptx-automizer)
+  Copyright (c) singerla (github.com/singerla) and contributors.
+  MIT License.
+  Ported semantics: per-relationship-type handlers (image / media /
+  hyperlink) and the "assertRelatedContent" pattern -- a final safety
+  sweep that copies any remaining unhandled relationship target so no
+  broken relationship survives the clone.
+
+* python-pptx, pull request #1141
+  (https://github.com/scanny/python-pptx/pull/1141)
+  python-pptx Copyright (c) 2013 Steve Canny and contributors.
+  MIT License.
+  Ported semantics: SlidePart clone with relationships re-created in
+  ascending rId order.
+
+The effective-style resolver (utils/resolve_core.py,
+utils/resolve_theme.py, utils/resolve_colors.py,
+utils/resolve_text_props.py, utils/resolve_shape_props.py,
+utils/resolve_utils.py) re-implements (does not copy) logic and
+architecture from:
+
+* ShapeCrawler (https://github.com/ShapeCrawler/ShapeCrawler)
+  Copyright (c) ShapeCrawler contributors.
+  MIT License.
+  Ported semantics: placeholder matching by type+idx with type-only
+  fallback (SCPShapeTree); the placeholder text-inheritance walk across
+  layout/master placeholder list styles and master txStyles
+  (ReferencedFont, PortionFontSize); the normAutofit fontScale rule --
+  scaling applies only to run-level rPr sizes (PortionFontSize);
+  lvl1-9pPr per-indent-level extraction (IndentFonts); schemeClr ->
+  clrMap -> clrScheme color resolution (PresentationColor, HexParser);
+  +mj-lt/+mn-lt theme font token mapping (TextPortionFont); reading the
+  shape p:style fontRef color for text in styled shapes (ShapeColor,
+  FontColor).
+
+* Apache POI (https://github.com/apache/poi)
+  Copyright the Apache Software Foundation.
+  Apache License 2.0.
+  Ported architecture: the single generic property-fetcher cascade
+  walker parameterized by per-property extractor callables
+  (XSLF CharacterPropertyFetcher / ParagraphPropertyFetcher); the
+  tint/shade-in-sRGB + luminance/saturation-in-HSL color transform
+  split (XSLFColor); the shape style-matrix resolution -- lnRef/fillRef
+  indexing into the theme fmtScheme with phClr substitution and the
+  fillRef >=1000 background-fill offset, and consulting the fontRef
+  layer after the placeholder chain but before presentation/theme
+  defaults (XSLFSimpleShape, XSLFTextRun).
+
+The paragraph-spacing and bullet cascades (spcBef/spcAft/lnSpc,
+buChar/buAutoNum/buNone with independently-inheriting buFont/buSzPct/
+buClr) have no reference implementation in either project and are
+original to this repository, built on the same walker and verified
+against PowerPoint COM-reported effective values.
+
+No source code was copied from these projects; the implementation in this
+repository is original Python written against the python-pptx API.

@@ -5,7 +5,7 @@ Provides MCP tools to analyze presentation styles, create reusable
 style profiles, and apply them to new presentations.
 """
 
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 from mcp.server.fastmcp import FastMCP
 from mcp.types import ToolAnnotations
 
@@ -21,7 +21,13 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
             title="Analyze Presentation Style",
         ),
     )
-    def analyze_presentation_style(file_path: str) -> Dict:
+    def analyze_presentation_style(
+        file_path: str,
+        resolved: bool = True,
+        slide_range: Optional[str] = None,
+        detail: str = "summary",
+        groups: Optional[List[str]] = None,
+    ) -> Dict:
         """Analyze a PowerPoint file to extract fonts, colors, layouts, and text hierarchy.
 
         Returns a comprehensive style analysis including:
@@ -30,15 +36,57 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
         - Layout positioning patterns
         - Text hierarchy (title/subtitle/body styles)
         - Consistency score (0-1)
+        - A "resolved" section (default on) with inheritance-resolved
+          EFFECTIVE values -- what PowerPoint actually displays -- for
+          fonts, colors, paragraph spacing, bullets, theme schemes, and
+          shape line/fill, resolved through the placeholder -> layout ->
+          master -> theme chain even where the XML stores nothing
+
+        The resolved section is hard-capped (~40KB); when truncated it
+        carries {"truncated": true, "hint": ...} -- narrow with
+        slide_range / detail / groups to see more.
 
         Args:
             file_path: Path to the .pptx file to analyze
+            resolved: Include the inheritance-resolved section (default
+                True; set False for the raw python-pptx view only)
+            slide_range: 1-based slides for the resolved section, e.g.
+                "1-3,5" (default: all slides)
+            detail: "summary" (deck-level rollup, default) or "full"
+                (per-run dump) for the resolved section
+            groups: Property-group filter for the resolved section, any
+                subset of ["fonts", "colors", "paragraphs", "shapes",
+                "theme"] (default: all)
         """
-        from utils.style_utils import analyze_presentation
+        from pathlib import Path
+
+        from pptx import Presentation
+
+        from utils.resolve_analysis import build_resolved_analysis
+        from utils.style_utils import analyze_open_presentation
 
         try:
-            analysis = analyze_presentation(file_path)
-            return {
+            if not Path(file_path).exists():
+                raise FileNotFoundError(
+                    f"Presentation not found: {file_path}"
+                )
+            # Parse the .pptx once; the raw analysis and the resolved
+            # section share the same Presentation object. The resolver
+            # runs FIRST: it is strictly read-only, while python-pptx
+            # property reads in the legacy analyzer (e.g.
+            # ``run.font.color``) mutate the in-memory tree.
+            prs = Presentation(file_path)
+            resolved_report = (
+                build_resolved_analysis(
+                    prs,
+                    slide_range=slide_range,
+                    detail=detail,
+                    groups=groups,
+                )
+                if resolved else None
+            )
+            analysis = analyze_open_presentation(prs, file_path)
+            result = {
                 "message": f"Analyzed {analysis['slide_count']} slides from {file_path}",
                 "primary_font": analysis["fonts"]["primary_font"],
                 "font_count": len(analysis["fonts"]["font_usage"]),
@@ -51,8 +99,13 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
                 "total_shapes": analysis["shapes"]["total_shapes"],
                 "full_analysis": analysis,
             }
+            if resolved_report is not None:
+                result["resolved"] = resolved_report
+            return result
         except FileNotFoundError as e:
             return {"error": str(e)}
+        except ValueError as e:
+            return {"error": f"Invalid analysis options: {str(e)}"}
         except Exception as e:
             return {"error": f"Analysis failed: {str(e)}"}
 

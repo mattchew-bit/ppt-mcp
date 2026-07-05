@@ -12,3 +12,6 @@ wheels/
 test/
 .DS_Store
 CLAUDE.md
+
+# Local tooling
+.serena/
