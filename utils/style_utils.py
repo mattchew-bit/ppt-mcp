@@ -64,8 +64,20 @@ def analyze_presentation(file_path: str) -> Dict[str, Any]:
     path = Path(file_path)
     if not path.exists():
         raise FileNotFoundError(f"Presentation not found: {file_path}")
+    return analyze_open_presentation(Presentation(str(path)), str(path))
 
-    prs = Presentation(str(path))
+
+def analyze_open_presentation(prs: Presentation,
+                              file_path: str) -> Dict[str, Any]:
+    """Analyze an already-open ``Presentation`` (no file re-parse).
+
+    Callers that also need the ``Presentation`` object for further work
+    (e.g. the resolved analysis) open the file once and share it here.
+    ``file_path`` is recorded in the result for reporting only.
+    """
+    if prs is None:
+        raise ValueError("prs must not be None")
+    path = Path(file_path)
 
     fonts = _analyze_fonts(prs)
     colors = _analyze_colors(prs)
