@@ -1,0 +1,681 @@
+{
+  "schema": "house-corpus-truth/1",
+  "generated_by": "tests/fixtures/house_corpus/authoring/write_metadata.py",
+  "generated_on": "2026-07-05",
+  "template": {
+    "name": "Meridian",
+    "master": "MeridianHouse"
+  },
+  "slide_size": {
+    "width_pt": 960.0,
+    "height_pt": 540.0,
+    "width_in": 13.3333,
+    "height_in": 7.5
+  },
+  "theme": {
+    "scheme": {
+      "dk1": "#20262B",
+      "lt1": "#FAF9F6",
+      "dk2": "#14324F",
+      "lt2": "#DCE3E8",
+      "accent1": "#1B7F79",
+      "accent2": "#D97C2B",
+      "accent3": "#3E5C76",
+      "accent4": "#8A5A83",
+      "accent5": "#5E8C61",
+      "accent6": "#B23A48",
+      "hlink": "#176B87",
+      "folHlink": "#6D5D8F"
+    },
+    "fonts": {
+      "major_latin": "Georgia",
+      "minor_latin": "Calibri"
+    }
+  },
+  "typography": {
+    "type_scale_pt": [
+      11.0,
+      14.0,
+      20.0,
+      30.0
+    ],
+    "title": {
+      "font": "Georgia",
+      "size_pt": 30.0,
+      "bold": false,
+      "alignment": "left",
+      "color": "#14324F",
+      "color_token": "dk2"
+    },
+    "subtitle": {
+      "font": "Calibri",
+      "size_pt": 20.0,
+      "color": "#3E5C76",
+      "color_token": "accent3"
+    },
+    "body": {
+      "font": "Calibri",
+      "size_pt": 14.0,
+      "color": "#20262B",
+      "color_token": "dk1"
+    },
+    "footer": {
+      "font": "Calibri",
+      "size_pt": 11.0,
+      "color": "#3E5C76",
+      "color_token": "accent3"
+    },
+    "kicker": {
+      "font": "Calibri",
+      "size_pt": 11.0,
+      "bold": true,
+      "color": "#1B7F79",
+      "color_token": "accent1"
+    },
+    "caption": {
+      "font": "Calibri",
+      "size_pt": 11.0,
+      "italic": true,
+      "color": "#3E5C76",
+      "color_token": "accent3"
+    },
+    "panel_text": {
+      "font": "Calibri",
+      "size_pt": 14.0,
+      "header_bold": true,
+      "color": "#20262B",
+      "color_token": "dk1"
+    }
+  },
+  "paragraph": {
+    "scope": "body placeholder levels (master bodyStyle)",
+    "levels": {
+      "1": {
+        "size_pt": 14.0,
+        "space_before_pt": 2.0,
+        "space_after_pt": 8.0,
+        "line_spacing_multiple": 1.2,
+        "bullet": {
+          "char": "—",
+          "char_code": 8212,
+          "font": "Arial",
+          "size_pct": 95
+        }
+      },
+      "2": {
+        "size_pt": 11.0,
+        "space_before_pt": 2.0,
+        "space_after_pt": 5.0,
+        "line_spacing_multiple": 1.2,
+        "bullet": {
+          "char": "·",
+          "char_code": 183,
+          "font": "Arial",
+          "size_pct": 90
+        }
+      },
+      "3": {
+        "size_pt": 11.0,
+        "space_before_pt": 1.0,
+        "space_after_pt": 4.0,
+        "line_spacing_multiple": 1.2,
+        "bullet": {
+          "char": ">",
+          "char_code": 62,
+          "font": "Arial",
+          "size_pct": 90
+        }
+      }
+    }
+  },
+  "shape_defaults": {
+    "border": {
+      "weight_pt": 1.25,
+      "color": "#14324F",
+      "color_token": "dk2",
+      "dash": "dash"
+    },
+    "corner_radius_adj": 0.12,
+    "fill": "#DCE3E8",
+    "fill_token": "lt2",
+    "applies_to": "content panels (rounded rectangles)"
+  },
+  "grid": {
+    "columns": 3,
+    "left_edges": {
+      "pt": [
+        60.0,
+        360.0,
+        660.0
+      ],
+      "in": [
+        0.8333,
+        5.0,
+        9.1667
+      ]
+    },
+    "right_edges": {
+      "pt": [
+        300.0,
+        600.0,
+        900.0
+      ],
+      "in": [
+        4.1667,
+        8.3333,
+        12.5
+      ]
+    },
+    "center_edges": {
+      "pt": [
+        180.0,
+        480.0,
+        780.0
+      ],
+      "in": [
+        2.5,
+        6.6667,
+        10.8333
+      ]
+    },
+    "column_width_pt": 240.0,
+    "gutter_pt": 60.0,
+    "tolerance_pt": 4.0,
+    "tolerance_in": 0.0556
+  },
+  "archetypes": {
+    "title": {
+      "title_band": {
+        "x_pt": 60.0,
+        "y_pt": 180.0,
+        "w_pt": 840.0,
+        "h_pt": 70.0,
+        "x_in": 0.8333,
+        "y_in": 2.5,
+        "w_in": 11.6667,
+        "h_in": 0.9722
+      },
+      "body_region": {
+        "x_pt": 60.0,
+        "y_pt": 270.0,
+        "w_pt": 540.0,
+        "h_pt": 40.0,
+        "x_in": 0.8333,
+        "y_in": 3.75,
+        "w_in": 7.5,
+        "h_in": 0.5556
+      },
+      "extras": {
+        "rule": {
+          "x_pt": 60.0,
+          "y_pt": 150.0,
+          "w_pt": 240.0,
+          "h_pt": 6.0,
+          "x_in": 0.8333,
+          "y_in": 2.0833,
+          "w_in": 3.3333,
+          "h_in": 0.0833
+        }
+      },
+      "count": 5,
+      "slides": [
+        "house_01:1",
+        "house_02:1",
+        "house_03:1",
+        "house_04:1",
+        "house_05:1"
+      ]
+    },
+    "agenda": {
+      "title_band": {
+        "x_pt": 60.0,
+        "y_pt": 30.0,
+        "w_pt": 840.0,
+        "h_pt": 60.0,
+        "x_in": 0.8333,
+        "y_in": 0.4167,
+        "w_in": 11.6667,
+        "h_in": 0.8333
+      },
+      "body_region": {
+        "x_pt": 60.0,
+        "y_pt": 120.0,
+        "w_pt": 540.0,
+        "h_pt": 330.0,
+        "x_in": 0.8333,
+        "y_in": 1.6667,
+        "w_in": 7.5,
+        "h_in": 4.5833
+      },
+      "extras": {
+        "image": {
+          "x_pt": 660.0,
+          "y_pt": 120.0,
+          "w_pt": 240.0,
+          "h_pt": 180.0,
+          "x_in": 9.1667,
+          "y_in": 1.6667,
+          "w_in": 3.3333,
+          "h_in": 2.5
+        },
+        "caption": {
+          "x_pt": 660.0,
+          "y_pt": 315.0,
+          "w_pt": 240.0,
+          "h_pt": 24.0,
+          "x_in": 9.1667,
+          "y_in": 4.375,
+          "w_in": 3.3333,
+          "h_in": 0.3333
+        }
+      },
+      "count": 4,
+      "slides": [
+        "house_01:2",
+        "house_02:2",
+        "house_03:2",
+        "house_05:2"
+      ]
+    },
+    "section_divider": {
+      "title_band": {
+        "x_pt": 60.0,
+        "y_pt": 240.0,
+        "w_pt": 840.0,
+        "h_pt": 60.0,
+        "x_in": 0.8333,
+        "y_in": 3.3333,
+        "w_in": 11.6667,
+        "h_in": 0.8333
+      },
+      "body_region": {
+        "x_pt": 60.0,
+        "y_pt": 320.0,
+        "w_pt": 840.0,
+        "h_pt": 6.0,
+        "x_in": 0.8333,
+        "y_in": 4.4444,
+        "w_in": 11.6667,
+        "h_in": 0.0833
+      },
+      "extras": {
+        "kicker": {
+          "x_pt": 60.0,
+          "y_pt": 200.0,
+          "w_pt": 240.0,
+          "h_pt": 24.0,
+          "x_in": 0.8333,
+          "y_in": 2.7778,
+          "w_in": 3.3333,
+          "h_in": 0.3333
+        }
+      },
+      "count": 4,
+      "slides": [
+        "house_01:3",
+        "house_02:5",
+        "house_04:2",
+        "house_05:5"
+      ]
+    },
+    "content": {
+      "title_band": {
+        "x_pt": 60.0,
+        "y_pt": 30.0,
+        "w_pt": 840.0,
+        "h_pt": 60.0,
+        "x_in": 0.8333,
+        "y_in": 0.4167,
+        "w_in": 11.6667,
+        "h_in": 0.8333
+      },
+      "body_region": {
+        "x_pt": 60.0,
+        "y_pt": 120.0,
+        "w_pt": 840.0,
+        "h_pt": 240.0,
+        "x_in": 0.8333,
+        "y_in": 1.6667,
+        "w_in": 11.6667,
+        "h_in": 3.3333
+      },
+      "extras": {
+        "takeaway": {
+          "x_pt": 60.0,
+          "y_pt": 380.0,
+          "w_pt": 840.0,
+          "h_pt": 70.0,
+          "x_in": 0.8333,
+          "y_in": 5.2778,
+          "w_in": 11.6667,
+          "h_in": 0.9722
+        }
+      },
+      "count": 6,
+      "slides": [
+        "house_01:4",
+        "house_02:3",
+        "house_03:3",
+        "house_03:4",
+        "house_04:3",
+        "house_05:3"
+      ]
+    },
+    "two_column": {
+      "title_band": {
+        "x_pt": 60.0,
+        "y_pt": 30.0,
+        "w_pt": 840.0,
+        "h_pt": 60.0,
+        "x_in": 0.8333,
+        "y_in": 0.4167,
+        "w_in": 11.6667,
+        "h_in": 0.8333
+      },
+      "body_region": {
+        "x_pt": 60.0,
+        "y_pt": 120.0,
+        "w_pt": 540.0,
+        "h_pt": 300.0,
+        "x_in": 0.8333,
+        "y_in": 1.6667,
+        "w_in": 7.5,
+        "h_in": 4.1667
+      },
+      "extras": {
+        "panel_left": {
+          "x_pt": 60.0,
+          "y_pt": 120.0,
+          "w_pt": 240.0,
+          "h_pt": 300.0,
+          "x_in": 0.8333,
+          "y_in": 1.6667,
+          "w_in": 3.3333,
+          "h_in": 4.1667
+        },
+        "panel_right": {
+          "x_pt": 360.0,
+          "y_pt": 120.0,
+          "w_pt": 240.0,
+          "h_pt": 300.0,
+          "x_in": 5.0,
+          "y_in": 1.6667,
+          "w_in": 3.3333,
+          "h_in": 4.1667
+        },
+        "image": {
+          "x_pt": 660.0,
+          "y_pt": 120.0,
+          "w_pt": 240.0,
+          "h_pt": 180.0,
+          "x_in": 9.1667,
+          "y_in": 1.6667,
+          "w_in": 3.3333,
+          "h_in": 2.5
+        },
+        "caption": {
+          "x_pt": 660.0,
+          "y_pt": 315.0,
+          "w_pt": 240.0,
+          "h_pt": 24.0,
+          "x_in": 9.1667,
+          "y_in": 4.375,
+          "w_in": 3.3333,
+          "h_in": 0.3333
+        }
+      },
+      "count": 5,
+      "slides": [
+        "house_01:5",
+        "house_02:4",
+        "house_03:5",
+        "house_04:4",
+        "house_05:4"
+      ]
+    },
+    "closing": {
+      "title_band": {
+        "x_pt": 60.0,
+        "y_pt": 210.0,
+        "w_pt": 840.0,
+        "h_pt": 60.0,
+        "x_in": 0.8333,
+        "y_in": 2.9167,
+        "w_in": 11.6667,
+        "h_in": 0.8333
+      },
+      "body_region": {
+        "x_pt": 360.0,
+        "y_pt": 290.0,
+        "w_pt": 240.0,
+        "h_pt": 140.0,
+        "x_in": 5.0,
+        "y_in": 4.0278,
+        "w_in": 3.3333,
+        "h_in": 1.9444
+      },
+      "extras": {
+        "rule": {
+          "x_pt": 60.0,
+          "y_pt": 180.0,
+          "w_pt": 240.0,
+          "h_pt": 6.0,
+          "x_in": 0.8333,
+          "y_in": 2.5,
+          "w_in": 3.3333,
+          "h_in": 0.0833
+        }
+      },
+      "count": 3,
+      "slides": [
+        "house_01:6",
+        "house_02:6",
+        "house_04:5"
+      ]
+    }
+  },
+  "footer": {
+    "zone": {
+      "x_pt": 60.0,
+      "y_pt": 500.0,
+      "w_pt": 840.0,
+      "h_pt": 28.0,
+      "x_in": 0.8333,
+      "y_in": 6.9444,
+      "w_in": 11.6667,
+      "h_in": 0.3889
+    },
+    "note_box": {
+      "x_pt": 60.0,
+      "y_pt": 502.0,
+      "w_pt": 300.0,
+      "h_pt": 22.0,
+      "x_in": 0.8333,
+      "y_in": 6.9722,
+      "w_in": 4.1667,
+      "h_in": 0.3056
+    },
+    "page_box": {
+      "x_pt": 780.0,
+      "y_pt": 502.0,
+      "w_pt": 120.0,
+      "h_pt": 22.0,
+      "x_in": 10.8333,
+      "y_in": 6.9722,
+      "w_in": 1.6667,
+      "h_in": 0.3056
+    },
+    "note_text": "Meridian Advisory | synthetic corpus",
+    "applies_to": [
+      "agenda",
+      "content",
+      "two_column",
+      "closing"
+    ]
+  },
+  "images": {
+    "zones": {
+      "sidebar": {
+        "x_pt": 660.0,
+        "y_pt": 120.0,
+        "w_pt": 240.0,
+        "h_pt": 180.0,
+        "x_in": 9.1667,
+        "y_in": 1.6667,
+        "w_in": 3.3333,
+        "h_in": 2.5
+      }
+    },
+    "size_pt": {
+      "width": 240.0,
+      "height": 180.0
+    },
+    "assets": [
+      "authoring/assets/exhibit_bars.png",
+      "authoring/assets/exhibit_blocks.png",
+      "authoring/assets/exhibit_wave.png"
+    ],
+    "slides_with_images": [
+      "house_01:2",
+      "house_01:5",
+      "house_02:2",
+      "house_02:4",
+      "house_03:2",
+      "house_03:5",
+      "house_04:4",
+      "house_05:2",
+      "house_05:4"
+    ]
+  },
+  "decks": {
+    "house_01.pptx": {
+      "title": "Meridian market entry review",
+      "slide_count": 6,
+      "slides": [
+        "title",
+        "agenda",
+        "section_divider",
+        "content",
+        "two_column",
+        "closing"
+      ]
+    },
+    "house_02.pptx": {
+      "title": "Operating model diagnostic",
+      "slide_count": 6,
+      "slides": [
+        "title",
+        "agenda",
+        "content",
+        "two_column",
+        "section_divider",
+        "closing"
+      ]
+    },
+    "house_03.pptx": {
+      "title": "Pricing program update",
+      "slide_count": 5,
+      "slides": [
+        "title",
+        "agenda",
+        "content",
+        "content",
+        "two_column"
+      ]
+    },
+    "house_04.pptx": {
+      "title": "Supply chain resilience assessment",
+      "slide_count": 5,
+      "slides": [
+        "title",
+        "section_divider",
+        "content",
+        "two_column",
+        "closing"
+      ]
+    },
+    "house_05.pptx": {
+      "title": "Digital roadmap briefing",
+      "slide_count": 5,
+      "slides": [
+        "title",
+        "agenda",
+        "content",
+        "two_column",
+        "section_divider"
+      ]
+    }
+  },
+  "labeled_slide_count": 27,
+  "tinted_elements": [
+    {
+      "deck": "house_01.pptx",
+      "slide": 3,
+      "shape": "AccentRule",
+      "target": "fill",
+      "scheme_token": "accent1",
+      "base_hex": "1B7F79",
+      "brightness": 0.4,
+      "xml_transforms": {
+        "lumMod": 60000,
+        "lumOff": 40000
+      },
+      "expected_hex": "4FDAD1"
+    },
+    {
+      "deck": "house_01.pptx",
+      "slide": 3,
+      "shape": "SectionKicker",
+      "target": "font",
+      "scheme_token": "accent2",
+      "base_hex": "D97C2B",
+      "brightness": -0.25,
+      "xml_transforms": {
+        "lumMod": 75000
+      },
+      "expected_hex": "A55D1E"
+    },
+    {
+      "deck": "house_01.pptx",
+      "slide": 5,
+      "shape": "ColumnPanelLeft",
+      "target": "fill",
+      "scheme_token": "accent1",
+      "base_hex": "1B7F79",
+      "brightness": 0.8,
+      "xml_transforms": {
+        "lumMod": 20000,
+        "lumOff": 80000
+      },
+      "expected_hex": "C4F3F0"
+    },
+    {
+      "deck": "house_01.pptx",
+      "slide": 5,
+      "shape": "ColumnPanelRight",
+      "target": "fill",
+      "scheme_token": "accent1",
+      "base_hex": "1B7F79",
+      "brightness": 0.8,
+      "xml_transforms": {
+        "lumMod": 20000,
+        "lumOff": 80000
+      },
+      "expected_hex": "C4F3F0"
+    },
+    {
+      "deck": "house_02.pptx",
+      "slide": 5,
+      "shape": "AccentRule",
+      "target": "fill",
+      "scheme_token": "accent1",
+      "base_hex": "1B7F79",
+      "brightness": 0.6,
+      "xml_transforms": {
+        "lumMod": 40000,
+        "lumOff": 60000
+      },
+      "expected_hex": "8AE6E0"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 [![smithery badge](https://smithery.ai/badge/@GongRzhe/Office-PowerPoint-MCP-Server)](https://smithery.ai/server/@GongRzhe/Office-PowerPoint-MCP-Server)
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
-A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 43 powerful tools organized into 12 specialized modules, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
+A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 47 powerful tools — 44 organized into 12 specialized modules plus 3 built-in server utilities, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
 
 ----
 
@@ -194,8 +194,8 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 
 ## 🚀 What's New in v2.0
 
-### **Comprehensive Tool Suite (43 Tools)**
-- **Complete PowerPoint manipulation** with 43 specialized tools
+### **Comprehensive Tool Suite (47 Tools)**
+- **Complete PowerPoint manipulation** with 47 specialized tools
 - **12 organized modules** covering all aspects of presentation creation
 - **Enhanced parameter handling** with comprehensive validation
 - **Intelligent defaults** and operation-based interfaces
@@ -215,7 +215,7 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 
 ## Available Tools
 
-The server provides **43 specialized tools** organized into the following categories:
+The server provides **47 specialized tools** organized into the following categories:
 
 ### **Presentation Management (7 tools)**
 1. **create_presentation** - Create new presentations
@@ -266,6 +266,21 @@ The server provides **43 specialized tools** organized into the following catego
 ### **Slide Cloning (2 tools)**
 35. **duplicate_slide** - Duplicate a slide within the same presentation with formatting preserved. The duplicate is appended at the end; images, media, and the layout are shared with the source slide; speaker notes are excluded. Charts, SmartArt, OLE objects, and ActiveX controls are not supported in v1.
 36. **copy_slide** - Copy a slide from one loaded presentation into another with full relationship rewriting (images/media re-created and deduplicated by content hash, external hyperlinks preserved, internal slide-jump hyperlinks dropped with text kept, speaker notes excluded). The copied slide is re-bound to the destination layout matched by layout name, so both decks must share template lineage — start the destination from the same template as the source. Charts, SmartArt, OLE objects, and ActiveX controls are not supported in v1.
+
+### **Style Analysis & House Profiles (8 tools)**
+37. **analyze_presentation_style** - Analyze fonts, colors, layouts, and text hierarchy, including an inheritance-**resolved** section (default on) reporting the EFFECTIVE values PowerPoint displays — resolved through the placeholder → layout → master → theme chain — with slide_range/detail/groups output controls and a hard response cap
+38. **create_style_profile** - Create a named, reusable style profile from a single presentation (legacy flat profile)
+39. **create_house_profile** - ✨ **NEW** Learn a compact house-style profile from 5–10 reference decks. Aggregates inheritance-resolved values into a prescriptive `house-profile/1` rules JSON (hard 8KB budget, DTCG-shaped leaf values): modal typography/paragraph/palette/shape_defaults rules, an inferred alignment-column **grid** (edge positions + tolerance), learned slide **archetypes** (title-band/body-region boxes over a closed set: title, agenda, section_divider, content, two_column, full_bleed, closing), image placement zones, and house distributions (font-size scale, spacing quanta, palette shares). Consumption split: `apply_style_profile` consumes only the deterministic typography/paragraph/palette/shape_defaults sections; grid/archetypes/distributions/images inform generation and the lint loop
+40. **save_style_profile** - Save a profile to JSON (house profiles persist in their canonical compact, budget-checked form)
+41. **load_style_profile** - Load a saved profile (legacy or house-profile/1)
+42. **get_style_profile** - Get the full details of a loaded profile
+43. **list_style_profiles** - List profiles loaded in memory
+44. **apply_style_profile** - Apply a profile's deterministic formatting rules to the current presentation (house profiles: minimal-diff writes only where effective values deviate; never touches masters, layouts, themes, or shape geometry)
+
+### **Server Utilities (3 tools)**
+45. **get_server_info** - Get server name, version, and feature overview
+46. **list_presentations** - List all presentations loaded in memory and which is current
+47. **switch_presentation** - Switch the current presentation to another loaded deck
 
 ## 🌟 Key Unified Tools
 
@@ -900,7 +915,7 @@ Templates automatically adjust to content:
 Office-PowerPoint-MCP-Server/
 ├── ppt_mcp_server.py          # Main consolidated server (v2.0)
 ├── slide_layout_templates.json # 25+ professional slide templates with dynamic features
-├── tools/                     # 12 specialized tool modules (43 tools total)
+├── tools/                     # 12 specialized tool modules (44 tools; +3 server utilities in ppt_mcp_server.py = 47 total)
 │   ├── __init__.py
 │   ├── presentation_tools.py  # Presentation management (7 tools)
 │   ├── content_tools.py       # Content & slides (8 tools)
@@ -912,7 +927,7 @@ Office-PowerPoint-MCP-Server/
 │   ├── connector_tools.py     # Connector lines/arrows (1 tool)
 │   ├── master_tools.py        # Slide master management (1 tool)
 │   ├── transition_tools.py    # Slide transitions (1 tool)
-│   ├── style_tools.py         # Style analysis & profiling (7 tools)
+│   ├── style_tools.py         # Style analysis & house profiles (8 tools)
 │   └── clone_tools.py         # Slide cloning (2 tools)
 ├── utils/                     # 8 organized utility modules (68+ functions)
 │   ├── __init__.py
@@ -935,7 +950,7 @@ Office-PowerPoint-MCP-Server/
 - **8 focused utility modules** with clear responsibilities
 - **12 organized tool modules** for comprehensive coverage
 - **68+ utility functions** organized by functionality
-- **43 MCP tools** covering all PowerPoint manipulation needs
+- **47 MCP tools** covering all PowerPoint manipulation needs
 - **Clear separation of concerns** for easier development
 
 ### **Code Organization**
