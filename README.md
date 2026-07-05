@@ -2,7 +2,7 @@
 [![smithery badge](https://smithery.ai/badge/@GongRzhe/Office-PowerPoint-MCP-Server)](https://smithery.ai/server/@GongRzhe/Office-PowerPoint-MCP-Server)
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
-A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 47 powerful tools — 44 organized into 12 specialized modules plus 3 built-in server utilities, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
+A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 50 powerful tools — 47 organized into 13 specialized modules plus 3 built-in server utilities, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
 
 ----
 
@@ -194,9 +194,9 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 
 ## 🚀 What's New in v2.0
 
-### **Comprehensive Tool Suite (47 Tools)**
-- **Complete PowerPoint manipulation** with 47 specialized tools
-- **12 organized modules** covering all aspects of presentation creation
+### **Comprehensive Tool Suite (50 Tools)**
+- **Complete PowerPoint manipulation** with 50 specialized tools
+- **13 organized modules** covering all aspects of presentation creation
 - **Enhanced parameter handling** with comprehensive validation
 - **Intelligent defaults** and operation-based interfaces
 
@@ -208,14 +208,14 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 - **Complete presentation generation** from template sequences
 
 ### **Modular Architecture**
-- **12 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, and clone tools
+- **13 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, clone, and render tools
 - **Better maintainability** with separated concerns
 - **Easier extensibility** for adding new features
 - **Cleaner code structure** with shared utilities
 
 ## Available Tools
 
-The server provides **47 specialized tools** organized into the following categories:
+The server provides **50 specialized tools** organized into the following categories:
 
 ### **Presentation Management (7 tools)**
 1. **create_presentation** - Create new presentations
@@ -277,10 +277,58 @@ The server provides **47 specialized tools** organized into the following catego
 43. **list_style_profiles** - List profiles loaded in memory
 44. **apply_style_profile** - Apply a profile's deterministic formatting rules to the current presentation (house profiles: minimal-diff writes only where effective values deviate; never touches masters, layouts, themes, or shape geometry)
 
+### **Rendering & Visual Compare (3 tools)**
+45. **render_slide** - ✨ **NEW** Render one slide of a .pptx file to PNG and return it inline (image content + path). Full-fidelity rendering via desktop PowerPoint COM on Windows (`pip install 'ppt-mcp[render]'`), with an automatic LibreOffice fallback (approximate fidelity) when COM is unavailable. Renders from a temp copy, so the deck may be open in PowerPoint at the same time; password-protected decks are refused up front
+46. **render_deck** - ✨ **NEW** Render all slides (or a 1-based `slide_range` like `"1-3,5"`) to one PNG per slide; returns every path plus the first few slides inline as image content
+47. **compare_renders** - ✨ **NEW** Pixel-compare two rendered PNGs using the pixelmatch recipe (anti-aliasing-aware, per-pixel threshold 0.1). Returns diff_ratio, diff pixel count, verdict at the strict 0.5% / lenient 1% gates, mean channel delta, and a diff PNG (mismatches in red) inline. Requires equal dimensions and same-renderer images (a `ppt-mcp-renderer` PNG tag is embedded at render time and enforced here — cross-renderer diffs measure the renderer, not the deck). Works on every platform without the `[render]` extra
+
 ### **Server Utilities (3 tools)**
-45. **get_server_info** - Get server name, version, and feature overview
-46. **list_presentations** - List all presentations loaded in memory and which is current
-47. **switch_presentation** - Switch the current presentation to another loaded deck
+48. **get_server_info** - Get server name, version, and feature overview
+49. **list_presentations** - List all presentations loaded in memory and which is current
+50. **switch_presentation** - Switch the current presentation to another loaded deck
+
+## Rendering
+
+Slide rendering turns generation into a closed loop: render the deck, *look*
+at it, compare against a reference, fix, repeat.
+
+### Installing the `[render]` extra
+
+```bash
+pip install 'ppt-mcp[render]'      # pywin32 (Windows only) + pypdfium2
+```
+
+- **Primary renderer — desktop PowerPoint via COM** (Windows + installed
+  PowerPoint required): full fidelity, explicit pixel dimensions
+  (default width 1280, height from the slide aspect ratio). All COM access
+  is serialized through a dedicated STA worker thread; macros are force-
+  disabled (`AutomationSecurity = msoAutomationSecurityForceDisable`) before
+  any file is opened; decks are opened read-only, without a window, and
+  **from a temp copy** — rendering works even while you have the same file
+  open in PowerPoint. A PowerPoint instance you already have running is
+  attached to and never quit; an instance the server launched is quit only
+  once it holds no presentations.
+- **Fallback renderer — LibreOffice** (auto-selected only when COM is
+  unavailable): `soffice --headless --convert-to pdf` with a throwaway
+  profile, rasterized via pypdfium2. Approximate fidelity (font
+  substitution, static SmartArt); output is tagged `renderer: libreoffice`
+  and `compare_renders` refuses to pixel-compare it against PowerPoint
+  output.
+- **Comparison works everywhere**: `compare_renders` needs only the core
+  dependencies (Pillow + pixelmatch) — no `[render]` extra, no Windows.
+- Password-protected (encrypted) decks are detected by magic bytes and
+  refused with a clear error before any renderer is invoked.
+
+```python
+# Render slide 3 and look at it
+render_slide(file_path="C:/decks/board_update.pptx", slide_index=2)
+
+# Render the whole deck at 960px wide
+render_deck(file_path="C:/decks/board_update.pptx", width=960)
+
+# Gate a regenerated slide against the reference render
+compare_renders(image_a="ref/slide_003.png", image_b="out/slide_003.png")
+```
 
 ## 🌟 Key Unified Tools
 
@@ -915,7 +963,7 @@ Templates automatically adjust to content:
 Office-PowerPoint-MCP-Server/
 ├── ppt_mcp_server.py          # Main consolidated server (v2.0)
 ├── slide_layout_templates.json # 25+ professional slide templates with dynamic features
-├── tools/                     # 12 specialized tool modules (44 tools; +3 server utilities in ppt_mcp_server.py = 47 total)
+├── tools/                     # 13 specialized tool modules (47 tools; +3 server utilities in ppt_mcp_server.py = 50 total)
 │   ├── __init__.py
 │   ├── presentation_tools.py  # Presentation management (7 tools)
 │   ├── content_tools.py       # Content & slides (8 tools)
@@ -928,8 +976,9 @@ Office-PowerPoint-MCP-Server/
 │   ├── master_tools.py        # Slide master management (1 tool)
 │   ├── transition_tools.py    # Slide transitions (1 tool)
 │   ├── style_tools.py         # Style analysis & house profiles (8 tools)
-│   └── clone_tools.py         # Slide cloning (2 tools)
-├── utils/                     # 8 organized utility modules (68+ functions)
+│   ├── clone_tools.py         # Slide cloning (2 tools)
+│   └── render_tools.py        # Rendering & visual compare (3 tools)
+├── utils/                     # Organized utility modules (68+ functions)
 │   ├── __init__.py
 │   ├── core_utils.py          # Error handling & safe operations
 │   ├── presentation_utils.py  # Presentation management utilities
@@ -938,7 +987,10 @@ Office-PowerPoint-MCP-Server/
 │   ├── template_utils.py      # Template management & dynamic features
 │   ├── validation_utils.py    # Text & layout validation
 │   ├── style_utils.py         # Style analysis & profiles
-│   └── clone_utils.py         # Slide clone / rel-rewriting engine
+│   ├── clone_utils.py         # Slide clone / rel-rewriting engine
+│   ├── render_com.py          # PowerPoint COM render worker (STA thread)
+│   ├── render_lo.py           # LibreOffice fallback renderer
+│   └── render_compare.py      # pixelmatch visual comparison
 ├── setup_mcp.py              # Interactive setup script
 ├── pyproject.toml            # Updated for v2.0
 └── README.md                 # This documentation
@@ -947,10 +999,10 @@ Office-PowerPoint-MCP-Server/
 ## 🏗️ Architecture Benefits
 
 ### **Modular Design**
-- **8 focused utility modules** with clear responsibilities
-- **12 organized tool modules** for comprehensive coverage
+- **Focused utility modules** with clear responsibilities
+- **13 organized tool modules** for comprehensive coverage
 - **68+ utility functions** organized by functionality
-- **47 MCP tools** covering all PowerPoint manipulation needs
+- **50 MCP tools** covering all PowerPoint manipulation needs
 - **Clear separation of concerns** for easier development
 
 ### **Code Organization**

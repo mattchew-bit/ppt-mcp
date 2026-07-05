@@ -22,6 +22,7 @@ from tools import (
     register_transition_tools,
     register_style_tools,
     register_clone_tools,
+    register_render_tools,
 )
 
 # Initialize the FastMCP server
@@ -339,6 +340,8 @@ register_clone_tools(
     get_current_presentation_id
 )
 
+register_render_tools(app)
+
 
 # ---- Additional Utility Tools ----
 
@@ -382,7 +385,7 @@ def get_server_info() -> Dict:
     return {
         "name": "PowerPoint MCP Server - Enhanced Edition",
         "version": "2.1.0",
-        "total_tools": 32,  # Organized into 11 specialized modules
+        "total_tools": 50,  # 47 in 13 specialized modules + 3 server utilities
         "loaded_presentations": len(presentations),
         "current_presentation": current_presentation_id,
         "features": [

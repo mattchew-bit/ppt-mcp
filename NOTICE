@@ -68,3 +68,15 @@ against PowerPoint COM-reported effective values.
 
 No source code was copied from these projects; the implementation in this
 repository is original Python written against the python-pptx API.
+
+The visual comparison in utils/render_compare.py follows the pixelmatch
+recipe (per-pixel YIQ threshold 0.1, anti-aliasing detection, diff-PNG
+artifact) as popularized by Playwright/jest visual testing:
+
+* pixelmatch (https://github.com/mapbox/pixelmatch) and its Python port
+  (https://github.com/whtsky/pixelmatch-py), both ISC License, consumed
+  as an unmodified PyPI dependency ("pixelmatch") -- no code vendored.
+
+The LibreOffice fallback renderer (utils/render_lo.py) rasterizes PDFs
+via pypdfium2 (https://github.com/pypdfium2-team/pypdfium2, Apache-2.0 /
+BSD-3-Clause), consumed as an unmodified optional PyPI dependency.
