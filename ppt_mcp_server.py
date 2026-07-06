@@ -23,6 +23,7 @@ from tools import (
     register_style_tools,
     register_clone_tools,
     register_render_tools,
+    register_lint_tools,
 )
 
 # Initialize the FastMCP server
@@ -341,6 +342,8 @@ register_clone_tools(
 )
 
 register_render_tools(app)
+
+register_lint_tools(app)
 
 
 # ---- Additional Utility Tools ----

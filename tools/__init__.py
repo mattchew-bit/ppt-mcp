@@ -16,6 +16,7 @@ from .transition_tools import register_transition_tools
 from .style_tools import register_style_tools
 from .clone_tools import register_clone_tools
 from .render_tools import register_render_tools
+from .lint_tools import register_lint_tools
 
 __all__ = [
     "register_presentation_tools",
@@ -31,4 +32,5 @@ __all__ = [
     "register_style_tools",
     "register_clone_tools",
     "register_render_tools",
+    "register_lint_tools",
 ]

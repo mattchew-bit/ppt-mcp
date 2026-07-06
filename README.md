@@ -2,7 +2,7 @@
 [![smithery badge](https://smithery.ai/badge/@GongRzhe/Office-PowerPoint-MCP-Server)](https://smithery.ai/server/@GongRzhe/Office-PowerPoint-MCP-Server)
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
-A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 50 powerful tools — 47 organized into 13 specialized modules plus 3 built-in server utilities, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
+A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 53 powerful tools — 50 organized into 14 specialized modules plus 3 built-in server utilities, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
 
 ----
 
@@ -194,9 +194,9 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 
 ## 🚀 What's New in v2.0
 
-### **Comprehensive Tool Suite (50 Tools)**
-- **Complete PowerPoint manipulation** with 50 specialized tools
-- **13 organized modules** covering all aspects of presentation creation
+### **Comprehensive Tool Suite (53 Tools)**
+- **Complete PowerPoint manipulation** with 53 specialized tools
+- **14 organized modules** covering all aspects of presentation creation
 - **Enhanced parameter handling** with comprehensive validation
 - **Intelligent defaults** and operation-based interfaces
 
@@ -208,14 +208,14 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 - **Complete presentation generation** from template sequences
 
 ### **Modular Architecture**
-- **13 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, clone, and render tools
+- **14 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, clone, render, and lint tools
 - **Better maintainability** with separated concerns
 - **Easier extensibility** for adding new features
 - **Cleaner code structure** with shared utilities
 
 ## Available Tools
 
-The server provides **50 specialized tools** organized into the following categories:
+The server provides **53 specialized tools** organized into the following categories:
 
 ### **Presentation Management (7 tools)**
 1. **create_presentation** - Create new presentations
@@ -282,10 +282,15 @@ The server provides **50 specialized tools** organized into the following catego
 46. **render_deck** - ✨ **NEW** Render all slides (or a 1-based `slide_range` like `"1-3,5"`) to one PNG per slide; returns every path plus the first few slides inline as image content
 47. **compare_renders** - ✨ **NEW** Pixel-compare two rendered PNGs using the pixelmatch recipe (anti-aliasing-aware, per-pixel threshold 0.1). Returns diff_ratio, diff pixel count, verdict at the strict 0.5% / lenient 1% gates, mean channel delta, and a diff PNG (mismatches in red) inline. Requires equal dimensions and same-renderer images (a `ppt-mcp-renderer` PNG tag is embedded at render time and enforced here — cross-renderer diffs measure the renderer, not the deck). Works on every platform without the `[render]` extra
 
+### **Style Lint & Text Fit (3 tools)**
+48. **lint_against_profile** - ✨ **NEW** Check a deck against a learned house profile and return an ordered deviation list (severity → slide) with slide/shape/paragraph refs, property, expected, actual, and distribution-style messages ("body run is 13pt; house type scale is {11, 14, 20, 30}pt"). Rule catalog v1: font-scale, font-family (complete latin/ea/cs/sym + buFont coverage), bullet-style, spacing, color-palette, hardcoded-color, border-style, off-grid (distance-to-nearest-gridline), straggler-textbox, off-slide, archetype-geometry, autofit-shrink, text-overflow-predicted, proofing-language, image-distortion, image-dpi, footer-presence, overlap, empty-slide, tiny-font. Deterministic — drives the generate → lint → fix loop even where rendering is unavailable. Out of scope v1: spellcheck, cross-slide numeric consistency
+49. **predict_text_fit** - ✨ **NEW** Predict whether each text frame's declared text fits its box — python-pptx's TextFitter run standalone (no deck mutation) with per-paragraph inheritance-resolved sizes, ~1.2× line pitch honoring lnSpc, and a font resolver covering system + per-user fonts and the registry. Verdicts: fits / overflow / borderline (±5% → "confirm by render"); catches the stale-normAutofit overflow hole
+50. **diff_decks** - ✨ **NEW** Deck-to-deck style diff: learns a reference profile from deck B and lints deck A against it (deck-B-as-profile semantics)
+
 ### **Server Utilities (3 tools)**
-48. **get_server_info** - Get server name, version, and feature overview
-49. **list_presentations** - List all presentations loaded in memory and which is current
-50. **switch_presentation** - Switch the current presentation to another loaded deck
+51. **get_server_info** - Get server name, version, and feature overview
+52. **list_presentations** - List all presentations loaded in memory and which is current
+53. **switch_presentation** - Switch the current presentation to another loaded deck
 
 ## Rendering
 
@@ -963,7 +968,7 @@ Templates automatically adjust to content:
 Office-PowerPoint-MCP-Server/
 ├── ppt_mcp_server.py          # Main consolidated server (v2.0)
 ├── slide_layout_templates.json # 25+ professional slide templates with dynamic features
-├── tools/                     # 13 specialized tool modules (47 tools; +3 server utilities in ppt_mcp_server.py = 50 total)
+├── tools/                     # 14 specialized tool modules (50 tools; +3 server utilities in ppt_mcp_server.py = 53 total)
 │   ├── __init__.py
 │   ├── presentation_tools.py  # Presentation management (7 tools)
 │   ├── content_tools.py       # Content & slides (8 tools)
@@ -977,7 +982,8 @@ Office-PowerPoint-MCP-Server/
 │   ├── transition_tools.py    # Slide transitions (1 tool)
 │   ├── style_tools.py         # Style analysis & house profiles (8 tools)
 │   ├── clone_tools.py         # Slide cloning (2 tools)
-│   └── render_tools.py        # Rendering & visual compare (3 tools)
+│   ├── render_tools.py        # Rendering & visual compare (3 tools)
+│   └── lint_tools.py          # Style lint & text fit (3 tools)
 ├── utils/                     # Organized utility modules (68+ functions)
 │   ├── __init__.py
 │   ├── core_utils.py          # Error handling & safe operations
@@ -990,7 +996,9 @@ Office-PowerPoint-MCP-Server/
 │   ├── clone_utils.py         # Slide clone / rel-rewriting engine
 │   ├── render_com.py          # PowerPoint COM render worker (STA thread)
 │   ├── render_lo.py           # LibreOffice fallback renderer
-│   └── render_compare.py      # pixelmatch visual comparison
+│   ├── render_compare.py      # pixelmatch visual comparison
+│   ├── lint_engine.py         # Style-lint engine (rules in lint_rules*.py)
+│   └── text_fit.py            # Standalone text-fit prediction
 ├── setup_mcp.py              # Interactive setup script
 ├── pyproject.toml            # Updated for v2.0
 └── README.md                 # This documentation
@@ -1000,9 +1008,9 @@ Office-PowerPoint-MCP-Server/
 
 ### **Modular Design**
 - **Focused utility modules** with clear responsibilities
-- **13 organized tool modules** for comprehensive coverage
+- **14 organized tool modules** for comprehensive coverage
 - **68+ utility functions** organized by functionality
-- **50 MCP tools** covering all PowerPoint manipulation needs
+- **53 MCP tools** covering all PowerPoint manipulation needs
 - **Clear separation of concerns** for easier development
 
 ### **Code Organization**
