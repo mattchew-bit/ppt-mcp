@@ -9,9 +9,23 @@ from mcp.types import ToolAnnotations
 import utils as ppt_utils
 
 
-def register_presentation_tools(app: FastMCP, presentations: Dict, get_current_presentation_id, get_template_search_directories):
-    """Register presentation management tools with the FastMCP app"""
-    
+def register_presentation_tools(app: FastMCP, presentations: Dict, get_current_presentation_id, get_template_search_directories, set_current_presentation_id=None):
+    """Register presentation management tools with the FastMCP app.
+
+    ``set_current_presentation_id`` (optional callable) is invoked with the
+    new presentation id whenever create/open stores a deck, so tools that
+    default to "the current presentation" work immediately after
+    create_presentation / create_presentation_from_template /
+    open_presentation without an explicit presentation_id.
+    """
+
+    def _store_presentation(pres, pres_id):
+        """Store a deck and make it the current presentation."""
+        presentations[pres_id] = pres
+        if set_current_presentation_id is not None:
+            set_current_presentation_id(pres_id)
+
+
     @app.tool(
         annotations=ToolAnnotations(
             title="Create Presentation",
@@ -26,10 +40,9 @@ def register_presentation_tools(app: FastMCP, presentations: Dict, get_current_p
         if id is None:
             id = f"presentation_{len(presentations) + 1}"
         
-        # Store the presentation
-        presentations[id] = pres
-        # Set as current presentation (this would need to be handled by caller)
-        
+        # Store the presentation and set it as current
+        _store_presentation(pres, id)
+
         return {
             "presentation_id": id,
             "message": f"Created new presentation with ID: {id}",
@@ -72,9 +85,9 @@ def register_presentation_tools(app: FastMCP, presentations: Dict, get_current_p
         if id is None:
             id = f"presentation_{len(presentations) + 1}"
         
-        # Store the presentation
-        presentations[id] = pres
-        
+        # Store the presentation and set it as current
+        _store_presentation(pres, id)
+
         return {
             "presentation_id": id,
             "message": f"Created new presentation from template '{template_path}' with ID: {id}",
@@ -109,9 +122,9 @@ def register_presentation_tools(app: FastMCP, presentations: Dict, get_current_p
         if id is None:
             id = f"presentation_{len(presentations) + 1}"
         
-        # Store the presentation
-        presentations[id] = pres
-        
+        # Store the presentation and set it as current
+        _store_presentation(pres, id)
+
         return {
             "presentation_id": id,
             "message": f"Opened presentation from {file_path} with ID: {id}",

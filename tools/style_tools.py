@@ -13,6 +13,43 @@ from mcp.types import ToolAnnotations
 _style_profiles: Dict[str, Any] = {}
 
 
+def _apply_legacy_flat_profile(pres, profile, profile_name: str,
+                               pres_id: str) -> Dict:
+    """Apply a legacy flat profile (create_style_profile output).
+
+    Historical behavior, unchanged: every run gets the profile's
+    primary font; runs in title-positioned shapes get the title size,
+    all others the body size.
+    """
+    from pptx.util import Pt
+
+    modified_runs = 0
+    for slide in pres.slides:
+        for shape in slide.shapes:
+            if not (hasattr(shape, "text_frame") and shape.text_frame):
+                continue
+
+            top = shape.top.inches if shape.top else 5
+            is_title = top < 2 and len(shape.text_frame.text) < 100
+
+            for para in shape.text_frame.paragraphs:
+                for run in para.runs:
+                    run.font.name = profile.primary_font
+                    if is_title:
+                        run.font.size = Pt(profile.title_font_size)
+                    else:
+                        run.font.size = Pt(profile.body_font_size)
+                    modified_runs += 1
+
+    return {
+        "message": f"Applied profile '{profile_name}' to presentation '{pres_id}'",
+        "font_applied": profile.primary_font,
+        "title_size": profile.title_font_size,
+        "body_size": profile.body_font_size,
+        "runs_modified": modified_runs,
+    }
+
+
 def register_style_tools(app: FastMCP, presentations: Dict, get_current_presentation_id):
     """Register style analysis and profiling tools with the FastMCP app."""
 
@@ -148,6 +185,68 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
 
     @app.tool(
         annotations=ToolAnnotations(
+            title="Create House Style Profile",
+        ),
+    )
+    def create_house_profile(paths: List[str], profile_name: str) -> Dict:
+        """Learn a compact house-style profile from multiple reference decks.
+
+        Runs the inheritance-resolved analyzer across 5-10 reference
+        presentations and aggregates the EFFECTIVE values into a
+        prescriptive "house-profile/1" rules JSON (hard 8KB budget):
+
+        - typography/paragraph/palette/shape_defaults: modal house rules
+          (fonts, sizes, colors, spacing, bullets, borders) -- the
+          deterministic subset apply_style_profile consumes
+        - grid: the inferred alignment-column grid (left/right/center
+          edge positions in inches + tolerance) -- consult when placing
+          shapes
+        - archetypes: learned slide-layout types with title_band /
+          body_region boxes -- consult when composing slides
+        - images/distributions: placement zones and house scales
+          (font-size scale, spacing quanta, palette shares) for
+          analysis and lint
+
+        The profile is stored in memory under profile_name; persist it
+        with save_style_profile and reload with load_style_profile.
+
+        Args:
+            paths: Paths of the reference .pptx decks (all must share
+                one slide size)
+            profile_name: Name to store the profile under
+        """
+        from utils.profile_extract import create_house_profile as build
+        from utils.profile_schema import enforce_size_budget
+
+        try:
+            profile = build(paths, profile_name)
+            _style_profiles[profile_name] = profile
+            payload = enforce_size_budget(profile)
+            return {
+                "message": (
+                    f"Created house profile '{profile_name}' from "
+                    f"{len(paths)} deck(s)"
+                ),
+                "profile_name": profile_name,
+                "schema_version": profile["schema_version"],
+                "source_decks": profile["source_decks"],
+                "profile_bytes": len(payload),
+                "archetypes": {
+                    name: spec["count"]
+                    for name, spec in profile["archetypes"].items()
+                },
+                "grid_edges": profile["grid"]["edges"],
+                "profile": profile,
+            }
+        except FileNotFoundError as e:
+            return {"error": str(e)}
+        except ValueError as e:
+            return {"error": f"Invalid house-profile input: {str(e)}"}
+        except Exception as e:
+            return {"error": f"Failed to create house profile: {str(e)}"}
+
+    @app.tool(
+        annotations=ToolAnnotations(
             title="Save Style Profile",
         ),
     )
@@ -185,15 +284,43 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
     def load_style_profile(file_path: str) -> Dict:
         """Load a previously saved style profile from a JSON file.
 
-        The loaded profile is available for reference and can be used to
-        guide formatting of new presentations.
+        Accepts both legacy flat profiles (created by
+        create_style_profile) and house-profile/1 multi-deck profiles
+        (schema_version "house-profile/1"). The loaded profile is
+        available for reference and can be applied with
+        apply_style_profile.
 
         Args:
             file_path: Path to the JSON profile file
         """
+        import json
+        from pathlib import Path
+
+        from utils.style_apply import is_house_profile
         from utils.style_utils import load_profile
 
         try:
+            data = json.loads(Path(file_path).read_text(encoding="utf-8"))
+            if is_house_profile(data):
+                name = data.get("name")
+                if not name or not isinstance(name, str):
+                    return {
+                        "error": "house-profile/1 file is missing its "
+                                 "'name' key"
+                    }
+                _style_profiles[name] = data
+                return {
+                    "message": f"Loaded house profile '{name}' from "
+                               f"{file_path}",
+                    "profile_name": name,
+                    "schema_version": data["schema_version"],
+                    "source_decks": data.get("source_decks", []),
+                    "sections": sorted(
+                        key for key in data
+                        if key not in ("schema_version", "name",
+                                       "source_decks")
+                    ),
+                }
             profile = load_profile(file_path)
             _style_profiles[profile.name] = profile
             return {
@@ -271,16 +398,35 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
         profile_name: str,
         presentation_id: Optional[str] = None,
     ) -> Dict:
-        """Apply a style profile's fonts and colors to the current presentation.
+        """Apply a style profile's formatting rules to the current presentation.
 
-        Updates all text in the presentation to use the profile's primary font,
-        title size, and body size. Does not change content — only formatting.
+        Two profile kinds are supported:
+
+        - house-profile/1 (multi-deck house profiles): applies the
+          DETERMINISTIC sections — typography (title/body/footer font,
+          size, bold, color, mapped via placeholder type), paragraph
+          spacing and per-level bullets, palette re-linking (hardcoded
+          srgbClr equal to a scheme color becomes the schemeClr token),
+          and shape_defaults (border weight/color/dash, hardcoded
+          off-palette srgbClr fills — theme-linked/tinted fills are
+          never repainted — and corner radius). Writes are
+          MINIMAL-DIFF: a value is
+          rewritten only where the inheritance-resolved EFFECTIVE value
+          deviates from the rule, so conformant content gets no new
+          explicit overrides. Slide masters, layouts, themes and shape
+          GEOMETRY are never touched — grid/archetypes/distributions/
+          images sections are consumed at generation time and enforced
+          by lint, not applied here.
+        - legacy flat profiles (create_style_profile): updates all text
+          to the profile's primary font, title size, and body size.
+
+        Does not change content — only formatting.
 
         Args:
             profile_name: Name of a loaded style profile
             presentation_id: ID of presentation to style (default: current)
         """
-        from pptx.util import Pt
+        from utils.style_apply import apply_house_profile, is_house_profile
 
         if profile_name not in _style_profiles:
             return {"error": f"Profile '{profile_name}' not found"}
@@ -291,29 +437,24 @@ def register_style_tools(app: FastMCP, presentations: Dict, get_current_presenta
             return {"error": "No presentation loaded. Create or open one first."}
 
         pres = presentations[pres_id]
-        modified_runs = 0
 
-        for slide in pres.slides:
-            for shape in slide.shapes:
-                if not (hasattr(shape, "text_frame") and shape.text_frame):
-                    continue
+        if is_house_profile(profile):
+            try:
+                summary = apply_house_profile(pres, profile)
+            except ValueError as e:
+                return {"error": f"House-profile apply rejected invalid "
+                                 f"input: {str(e)}"}
+            except Exception as e:
+                return {"error": f"House-profile apply failed: {str(e)}"}
+            return {
+                "message": (
+                    f"Applied house profile '{profile_name}' to "
+                    f"presentation '{pres_id}': {summary['writes']} "
+                    f"deviation(s) corrected on slides "
+                    f"{summary['slides_touched']}"
+                ),
+                **summary,
+            }
 
-                top = shape.top.inches if shape.top else 5
-                is_title = top < 2 and len(shape.text_frame.text) < 100
-
-                for para in shape.text_frame.paragraphs:
-                    for run in para.runs:
-                        run.font.name = profile.primary_font
-                        if is_title:
-                            run.font.size = Pt(profile.title_font_size)
-                        else:
-                            run.font.size = Pt(profile.body_font_size)
-                        modified_runs += 1
-
-        return {
-            "message": f"Applied profile '{profile_name}' to presentation '{pres_id}'",
-            "font_applied": profile.primary_font,
-            "title_size": profile.title_font_size,
-            "body_size": profile.body_font_size,
-            "runs_modified": modified_runs,
-        }
+        return _apply_legacy_flat_profile(pres, profile, profile_name,
+                                          pres_id)

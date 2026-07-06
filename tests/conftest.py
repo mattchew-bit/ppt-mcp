@@ -63,6 +63,62 @@ def skip_if_fixture_missing(name: str):
     )
 
 
+# ---------------------------------------------------------------------------
+# Step 3 house corpus (tests/fixtures/house_corpus/)
+# ---------------------------------------------------------------------------
+
+HOUSE_CORPUS_DIR = FIXTURES_DIR / "house_corpus"
+
+#: The five Meridian house decks the profile engine learns from.
+HOUSE_CORPUS_DECKS = tuple(f"house_{i:02d}.pptx" for i in range(1, 6))
+
+
+def house_corpus_paths() -> list:
+    """Absolute paths of the five house-corpus decks (as strings)."""
+    return [str(HOUSE_CORPUS_DIR / name) for name in HOUSE_CORPUS_DECKS]
+
+
+def house_corpus_missing() -> bool:
+    """True when any house-corpus deck has not been generated yet."""
+    return any(not (HOUSE_CORPUS_DIR / name).is_file()
+               for name in HOUSE_CORPUS_DECKS)
+
+
+def skip_if_house_corpus_missing():
+    """``skipif`` marker for tests needing the full house corpus."""
+    return pytest.mark.skipif(
+        house_corpus_missing(),
+        reason="house corpus not present in tests/fixtures/house_corpus/",
+    )
+
+
+def load_corpus_truth() -> dict:
+    """The seeded-truth metadata for the house corpus."""
+    path = HOUSE_CORPUS_DIR / "corpus_truth.json"
+    with path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+@pytest.fixture(scope="session")
+def house_profile():
+    """Session-cached house profile built from the five corpus decks."""
+    if house_corpus_missing():
+        pytest.skip("house corpus not present in tests/fixtures/house_corpus/")
+    from utils.profile_extract import create_house_profile
+
+    return create_house_profile(house_corpus_paths(), "meridian_test")
+
+
+@pytest.fixture(scope="session")
+def house_facts():
+    """Session-cached resolved slide facts for the five corpus decks."""
+    if house_corpus_missing():
+        pytest.skip("house corpus not present in tests/fixtures/house_corpus/")
+    from utils.profile_extract import collect_corpus_facts
+
+    return collect_corpus_facts(house_corpus_paths())
+
+
 @pytest.fixture
 def open_deck():
     """Factory fixture: open a fixture deck via python-pptx.

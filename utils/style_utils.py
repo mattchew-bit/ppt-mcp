@@ -148,16 +148,38 @@ def create_profile(analysis: Dict[str, Any], name: str) -> StyleProfile:
     )
 
 
-def save_profile(profile: StyleProfile, file_path: str) -> None:
-    """Save a StyleProfile to a JSON file."""
-    data = asdict(profile)
-    Path(file_path).write_text(json.dumps(data, indent=2, default=str))
-    logger.info("Saved style profile '%s' to %s", profile.name, file_path)
+def save_profile(profile, file_path: str) -> None:
+    """Save a profile to a JSON file.
+
+    Accepts either a legacy ``StyleProfile`` dataclass or a
+    ``house-profile/1`` dict (see ``utils.profile_schema``). House
+    profiles are written in their canonical compact form so the
+    on-disk size IS the budgeted size.
+    """
+    if hasattr(profile, "__dataclass_fields__"):
+        data = asdict(profile)
+        payload = json.dumps(data, indent=2, default=str)
+        name = profile.name
+    else:
+        from .profile_schema import enforce_size_budget
+
+        payload = enforce_size_budget(profile).decode("utf-8")
+        name = profile.get("name", "?")
+    Path(file_path).write_text(payload, encoding="utf-8")
+    logger.info("Saved style profile '%s' to %s", name, file_path)
 
 
-def load_profile(file_path: str) -> StyleProfile:
-    """Load a StyleProfile from a JSON file."""
-    data = json.loads(Path(file_path).read_text())
+def load_profile(file_path: str):
+    """Load a profile from a JSON file.
+
+    Returns a ``house-profile/1`` dict as-is (identified by its
+    ``schema_version``); anything else deserializes into the legacy
+    ``StyleProfile`` dataclass.
+    """
+    data = json.loads(Path(file_path).read_text(encoding="utf-8"))
+    if isinstance(data, dict) and str(
+            data.get("schema_version", "")).startswith("house-profile/"):
+        return data
     # Convert tuples back from lists
     if "slide_dimensions" in data:
         data["slide_dimensions"] = tuple(data["slide_dimensions"])

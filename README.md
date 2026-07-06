@@ -2,7 +2,7 @@
 [![smithery badge](https://smithery.ai/badge/@GongRzhe/Office-PowerPoint-MCP-Server)](https://smithery.ai/server/@GongRzhe/Office-PowerPoint-MCP-Server)
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
-A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 43 powerful tools organized into 12 specialized modules, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
+A comprehensive MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. **Version 2.0** provides 53 powerful tools — 50 organized into 14 specialized modules plus 3 built-in server utilities, offering complete PowerPoint creation, management, and professional design capabilities. The server features a modular architecture with enhanced parameter handling, intelligent operation selection, and comprehensive error handling.
 
 ----
 
@@ -194,9 +194,9 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 
 ## 🚀 What's New in v2.0
 
-### **Comprehensive Tool Suite (43 Tools)**
-- **Complete PowerPoint manipulation** with 43 specialized tools
-- **12 organized modules** covering all aspects of presentation creation
+### **Comprehensive Tool Suite (53 Tools)**
+- **Complete PowerPoint manipulation** with 53 specialized tools
+- **14 organized modules** covering all aspects of presentation creation
 - **Enhanced parameter handling** with comprehensive validation
 - **Intelligent defaults** and operation-based interfaces
 
@@ -208,14 +208,14 @@ If you have `uvx` installed, you can run the server directly from PyPI without l
 - **Complete presentation generation** from template sequences
 
 ### **Modular Architecture**
-- **12 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, and clone tools
+- **14 specialized modules**: presentation, content, structural, professional, template, hyperlink, chart, connector, master, transition, style, clone, render, and lint tools
 - **Better maintainability** with separated concerns
 - **Easier extensibility** for adding new features
 - **Cleaner code structure** with shared utilities
 
 ## Available Tools
 
-The server provides **43 specialized tools** organized into the following categories:
+The server provides **53 specialized tools** organized into the following categories:
 
 ### **Presentation Management (7 tools)**
 1. **create_presentation** - Create new presentations
@@ -266,6 +266,74 @@ The server provides **43 specialized tools** organized into the following catego
 ### **Slide Cloning (2 tools)**
 35. **duplicate_slide** - Duplicate a slide within the same presentation with formatting preserved. The duplicate is appended at the end; images, media, and the layout are shared with the source slide; speaker notes are excluded. Charts, SmartArt, OLE objects, and ActiveX controls are not supported in v1.
 36. **copy_slide** - Copy a slide from one loaded presentation into another with full relationship rewriting (images/media re-created and deduplicated by content hash, external hyperlinks preserved, internal slide-jump hyperlinks dropped with text kept, speaker notes excluded). The copied slide is re-bound to the destination layout matched by layout name, so both decks must share template lineage — start the destination from the same template as the source. Charts, SmartArt, OLE objects, and ActiveX controls are not supported in v1.
+
+### **Style Analysis & House Profiles (8 tools)**
+37. **analyze_presentation_style** - Analyze fonts, colors, layouts, and text hierarchy, including an inheritance-**resolved** section (default on) reporting the EFFECTIVE values PowerPoint displays — resolved through the placeholder → layout → master → theme chain — with slide_range/detail/groups output controls and a hard response cap
+38. **create_style_profile** - Create a named, reusable style profile from a single presentation (legacy flat profile)
+39. **create_house_profile** - ✨ **NEW** Learn a compact house-style profile from 5–10 reference decks. Aggregates inheritance-resolved values into a prescriptive `house-profile/1` rules JSON (hard 8KB budget, DTCG-shaped leaf values): modal typography/paragraph/palette/shape_defaults rules, an inferred alignment-column **grid** (edge positions + tolerance), learned slide **archetypes** (title-band/body-region boxes over a closed set: title, agenda, section_divider, content, two_column, full_bleed, closing), image placement zones, and house distributions (font-size scale, spacing quanta, palette shares). Consumption split: `apply_style_profile` consumes only the deterministic typography/paragraph/palette/shape_defaults sections; grid/archetypes/distributions/images inform generation and the lint loop
+40. **save_style_profile** - Save a profile to JSON (house profiles persist in their canonical compact, budget-checked form)
+41. **load_style_profile** - Load a saved profile (legacy or house-profile/1)
+42. **get_style_profile** - Get the full details of a loaded profile
+43. **list_style_profiles** - List profiles loaded in memory
+44. **apply_style_profile** - Apply a profile's deterministic formatting rules to the current presentation (house profiles: minimal-diff writes only where effective values deviate; never touches masters, layouts, themes, or shape geometry)
+
+### **Rendering & Visual Compare (3 tools)**
+45. **render_slide** - ✨ **NEW** Render one slide of a .pptx file to PNG and return it inline (image content + path). Full-fidelity rendering via desktop PowerPoint COM on Windows (`pip install 'ppt-mcp[render]'`), with an automatic LibreOffice fallback (approximate fidelity) when COM is unavailable. Renders from a temp copy, so the deck may be open in PowerPoint at the same time; password-protected decks are refused up front
+46. **render_deck** - ✨ **NEW** Render all slides (or a 1-based `slide_range` like `"1-3,5"`) to one PNG per slide; returns every path plus the first few slides inline as image content
+47. **compare_renders** - ✨ **NEW** Pixel-compare two rendered PNGs using the pixelmatch recipe (anti-aliasing-aware, per-pixel threshold 0.1). Returns diff_ratio, diff pixel count, verdict at the strict 0.5% / lenient 1% gates, mean channel delta, and a diff PNG (mismatches in red) inline. Requires equal dimensions and same-renderer images (a `ppt-mcp-renderer` PNG tag is embedded at render time and enforced here — cross-renderer diffs measure the renderer, not the deck). Works on every platform without the `[render]` extra
+
+### **Style Lint & Text Fit (3 tools)**
+48. **lint_against_profile** - ✨ **NEW** Check a deck against a learned house profile and return an ordered deviation list (severity → slide) with slide/shape/paragraph refs, property, expected, actual, and distribution-style messages ("body run is 13pt; house type scale is {11, 14, 20, 30}pt"). Rule catalog v1: font-scale, font-family (complete latin/ea/cs/sym + buFont coverage), bullet-style, spacing, color-palette, hardcoded-color, border-style, off-grid (distance-to-nearest-gridline), straggler-textbox, off-slide, archetype-geometry, autofit-shrink, text-overflow-predicted, proofing-language, image-distortion, image-dpi, footer-presence, overlap, empty-slide, tiny-font. Deterministic — drives the generate → lint → fix loop even where rendering is unavailable. Out of scope v1: spellcheck, cross-slide numeric consistency
+49. **predict_text_fit** - ✨ **NEW** Predict whether each text frame's declared text fits its box — python-pptx's TextFitter run standalone (no deck mutation) with per-paragraph inheritance-resolved sizes, ~1.2× line pitch honoring lnSpc, and a font resolver covering system + per-user fonts and the registry. Verdicts: fits / overflow / borderline (±5% → "confirm by render"); catches the stale-normAutofit overflow hole
+50. **diff_decks** - ✨ **NEW** Deck-to-deck style diff: learns a reference profile from deck B and lints deck A against it (deck-B-as-profile semantics)
+
+### **Server Utilities (3 tools)**
+51. **get_server_info** - Get server name, version, and feature overview
+52. **list_presentations** - List all presentations loaded in memory and which is current
+53. **switch_presentation** - Switch the current presentation to another loaded deck
+
+## Rendering
+
+Slide rendering turns generation into a closed loop: render the deck, *look*
+at it, compare against a reference, fix, repeat.
+
+### Installing the `[render]` extra
+
+```bash
+pip install 'ppt-mcp[render]'      # pywin32 (Windows only) + pypdfium2
+```
+
+- **Primary renderer — desktop PowerPoint via COM** (Windows + installed
+  PowerPoint required): full fidelity, explicit pixel dimensions
+  (default width 1280, height from the slide aspect ratio). All COM access
+  is serialized through a dedicated STA worker thread; macros are force-
+  disabled (`AutomationSecurity = msoAutomationSecurityForceDisable`) before
+  any file is opened; decks are opened read-only, without a window, and
+  **from a temp copy** — rendering works even while you have the same file
+  open in PowerPoint. A PowerPoint instance you already have running is
+  attached to and never quit; an instance the server launched is quit only
+  once it holds no presentations.
+- **Fallback renderer — LibreOffice** (auto-selected only when COM is
+  unavailable): `soffice --headless --convert-to pdf` with a throwaway
+  profile, rasterized via pypdfium2. Approximate fidelity (font
+  substitution, static SmartArt); output is tagged `renderer: libreoffice`
+  and `compare_renders` refuses to pixel-compare it against PowerPoint
+  output.
+- **Comparison works everywhere**: `compare_renders` needs only the core
+  dependencies (Pillow + pixelmatch) — no `[render]` extra, no Windows.
+- Password-protected (encrypted) decks are detected by magic bytes and
+  refused with a clear error before any renderer is invoked.
+
+```python
+# Render slide 3 and look at it
+render_slide(file_path="C:/decks/board_update.pptx", slide_index=2)
+
+# Render the whole deck at 960px wide
+render_deck(file_path="C:/decks/board_update.pptx", width=960)
+
+# Gate a regenerated slide against the reference render
+compare_renders(image_a="ref/slide_003.png", image_b="out/slide_003.png")
+```
 
 ## 🌟 Key Unified Tools
 
@@ -900,7 +968,7 @@ Templates automatically adjust to content:
 Office-PowerPoint-MCP-Server/
 ├── ppt_mcp_server.py          # Main consolidated server (v2.0)
 ├── slide_layout_templates.json # 25+ professional slide templates with dynamic features
-├── tools/                     # 12 specialized tool modules (43 tools total)
+├── tools/                     # 14 specialized tool modules (50 tools; +3 server utilities in ppt_mcp_server.py = 53 total)
 │   ├── __init__.py
 │   ├── presentation_tools.py  # Presentation management (7 tools)
 │   ├── content_tools.py       # Content & slides (8 tools)
@@ -912,9 +980,11 @@ Office-PowerPoint-MCP-Server/
 │   ├── connector_tools.py     # Connector lines/arrows (1 tool)
 │   ├── master_tools.py        # Slide master management (1 tool)
 │   ├── transition_tools.py    # Slide transitions (1 tool)
-│   ├── style_tools.py         # Style analysis & profiling (7 tools)
-│   └── clone_tools.py         # Slide cloning (2 tools)
-├── utils/                     # 8 organized utility modules (68+ functions)
+│   ├── style_tools.py         # Style analysis & house profiles (8 tools)
+│   ├── clone_tools.py         # Slide cloning (2 tools)
+│   ├── render_tools.py        # Rendering & visual compare (3 tools)
+│   └── lint_tools.py          # Style lint & text fit (3 tools)
+├── utils/                     # Organized utility modules (68+ functions)
 │   ├── __init__.py
 │   ├── core_utils.py          # Error handling & safe operations
 │   ├── presentation_utils.py  # Presentation management utilities
@@ -923,7 +993,12 @@ Office-PowerPoint-MCP-Server/
 │   ├── template_utils.py      # Template management & dynamic features
 │   ├── validation_utils.py    # Text & layout validation
 │   ├── style_utils.py         # Style analysis & profiles
-│   └── clone_utils.py         # Slide clone / rel-rewriting engine
+│   ├── clone_utils.py         # Slide clone / rel-rewriting engine
+│   ├── render_com.py          # PowerPoint COM render worker (STA thread)
+│   ├── render_lo.py           # LibreOffice fallback renderer
+│   ├── render_compare.py      # pixelmatch visual comparison
+│   ├── lint_engine.py         # Style-lint engine (rules in lint_rules*.py)
+│   └── text_fit.py            # Standalone text-fit prediction
 ├── setup_mcp.py              # Interactive setup script
 ├── pyproject.toml            # Updated for v2.0
 └── README.md                 # This documentation
@@ -932,10 +1007,10 @@ Office-PowerPoint-MCP-Server/
 ## 🏗️ Architecture Benefits
 
 ### **Modular Design**
-- **8 focused utility modules** with clear responsibilities
-- **12 organized tool modules** for comprehensive coverage
+- **Focused utility modules** with clear responsibilities
+- **14 organized tool modules** for comprehensive coverage
 - **68+ utility functions** organized by functionality
-- **43 MCP tools** covering all PowerPoint manipulation needs
+- **53 MCP tools** covering all PowerPoint manipulation needs
 - **Clear separation of concerns** for easier development
 
 ### **Code Organization**

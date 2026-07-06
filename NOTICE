@@ -68,3 +68,32 @@ against PowerPoint COM-reported effective values.
 
 No source code was copied from these projects; the implementation in this
 repository is original Python written against the python-pptx API.
+
+The visual comparison in utils/render_compare.py follows the pixelmatch
+recipe (per-pixel YIQ threshold 0.1, anti-aliasing detection, diff-PNG
+artifact) as popularized by Playwright/jest visual testing:
+
+* pixelmatch (https://github.com/mapbox/pixelmatch) and its Python port
+  (https://github.com/whtsky/pixelmatch-py), both ISC License, consumed
+  as an unmodified PyPI dependency ("pixelmatch") -- no code vendored.
+
+The LibreOffice fallback renderer (utils/render_lo.py) rasterizes PDFs
+via pypdfium2 (https://github.com/pypdfium2-team/pypdfium2, Apache-2.0 /
+BSD-3-Clause), consumed as an unmodified optional PyPI dependency.
+
+The style-lint rule catalog (utils/lint_rules.py,
+utils/lint_rules_geometry.py) re-implements (does not copy) the rule
+semantics of:
+
+* pptx-lint (https://github.com/leppardwang/pptx-lint, PyPI
+  "pptx-lint"). Copyright (c) leppardwang. MIT License.
+  Ported semantics: the overlap, empty-slide and small-font (here
+  "tiny-font") slide checks, adapted to inheritance-resolved effective
+  values -- overlap is restricted to non-placeholder shape pairs and
+  the small-font floor sits below normal footer/caption sizes
+  (documented in the rule docstrings).
+
+The text-fit prediction (utils/text_fit.py) subclasses and runs
+python-pptx's own TextFitter (MIT, see above) standalone, with a
+patched line-pitch model, a break-guard for over-wide words, and a
+fontTools-based font resolver.

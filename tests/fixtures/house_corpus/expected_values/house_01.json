@@ -1,0 +1,2023 @@
+{
+  "fixture": "house_01",
+  "source": "house_01.pptx",
+  "generated_by": "tests/fixtures/authoring/extract_expected.py (PowerPoint COM, effective values)",
+  "generated_on": "2026-07-05",
+  "powerpoint_version": "16.0",
+  "slide_size_pt": {
+    "width": 960.0,
+    "height": 540.0
+  },
+  "slides": [
+    {
+      "index": 1,
+      "layout_name": "Title Only",
+      "master_name": "MeridianHouse",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 180.0,
+            "width_pt": 840.0,
+            "height_pt": 70.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Meridian market entry review",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "14324F"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TitleRule",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 150.0,
+            "width_pt": 240.0,
+            "height_pt": 6.0,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "1B7F79"
+          },
+          "paragraphs": []
+        },
+        {
+          "name": "SubtitleBox",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 270.0,
+            "width_pt": 540.0,
+            "height_pt": 31.5,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Prepared for the executive committee",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 20.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "layout_name": "Title and Content",
+      "master_name": "MeridianHouse",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 30.0,
+            "width_pt": 840.0,
+            "height_pt": 60.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Agenda for the working session",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "14324F"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BodyContent",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 120.0,
+            "width_pt": 540.0,
+            "height_pt": 330.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Where the market stands today",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Entry routes on the shortlist",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Investment ask and phasing",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Decision points for this committee",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 5,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Next steps and owners",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SidebarExhibit",
+          "shape_type": 13,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 660.0,
+            "top_pt": 120.0,
+            "width_pt": 240.0,
+            "height_pt": 180.0,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": []
+        },
+        {
+          "name": "SidebarCaption",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 660.0,
+            "top_pt": 315.0,
+            "width_pt": 240.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Exhibit 1 - category growth, synthetic",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": true,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterNote",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 502.0,
+            "width_pt": 300.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Meridian Advisory | synthetic corpus",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterPage",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 780.0,
+            "top_pt": 502.0,
+            "width_pt": 120.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "02",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "layout_name": "Title Only",
+      "master_name": "MeridianHouse",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 240.0,
+            "width_pt": 840.0,
+            "height_pt": 60.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Where the market stands",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "14324F"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SectionKicker",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 200.0,
+            "width_pt": 240.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "SECTION 01",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "A55D1E"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "AccentRule",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 320.0,
+            "width_pt": 840.0,
+            "height_pt": 6.0,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "4FDAD1"
+          },
+          "paragraphs": []
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "layout_name": "Title and Content",
+      "master_name": "MeridianHouse",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 30.0,
+            "width_pt": 840.0,
+            "height_pt": 60.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Demand is recovering faster than supply",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "14324F"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BodyContent",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 7,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 120.0,
+            "width_pt": 840.0,
+            "height_pt": 240.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Category demand grew nine percent this year",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 5.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 183,
+                "char": "·",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Premium tier carried most of the growth",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 5.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 183,
+                "char": "·",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Entry tier stayed flat for four quarters",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Supply additions lag by roughly two years",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 5,
+              "level": 2,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 5.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 183,
+                "char": "·",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Two announced plants slipped to next cycle",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 6,
+              "level": 3,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 1.0,
+              "space_after_pt": 4.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 62,
+                "char": ">",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.9
+              },
+              "runs": [
+                {
+                  "text": "Permitting drove both slips",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 7,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 2.0,
+              "space_after_pt": 8.0,
+              "space_within": 1.2,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 1,
+                "type_name": "unnumbered",
+                "visible": true,
+                "char_code": 8212,
+                "char": "—",
+                "font_name": "Arial",
+                "color_rgb": "20262B",
+                "color_source": "follow_text",
+                "relative_size": 0.95
+              },
+              "runs": [
+                {
+                  "text": "Pricing held firm across all regions",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TakeawayPanel",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 380.0,
+            "width_pt": 840.0,
+            "height_pt": 70.0,
+            "rotation": 0.0,
+            "auto_shape_type": 5,
+            "adjustments": [
+              0.12
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 1.25,
+            "dash_style": 4,
+            "dash_style_name": "dash",
+            "color_rgb": "14324F"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "DCE3E8"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Key takeaway",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "A two year demand-supply gap keeps pricing attractive for a new entrant",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterNote",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 502.0,
+            "width_pt": 300.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Meridian Advisory | synthetic corpus",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterPage",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 780.0,
+            "top_pt": 502.0,
+            "width_pt": 120.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "04",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "layout_name": "Title Only",
+      "master_name": "MeridianHouse",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 30.0,
+            "width_pt": 840.0,
+            "height_pt": 60.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Two entry routes lead the shortlist",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "14324F"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ColumnPanelLeft",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 120.0,
+            "width_pt": 240.0,
+            "height_pt": 300.0,
+            "rotation": 0.0,
+            "auto_shape_type": 5,
+            "adjustments": [
+              0.12
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 1.25,
+            "dash_style": 4,
+            "dash_style_name": "dash",
+            "color_rgb": "14324F"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "C4F3F0"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Build",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Full control of the asset",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Slowest route to first revenue",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Highest capital at risk",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ColumnPanelRight",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 360.0,
+            "top_pt": 120.0,
+            "width_pt": 240.0,
+            "height_pt": 300.0,
+            "rotation": 0.0,
+            "auto_shape_type": 5,
+            "adjustments": [
+              0.12
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 1.25,
+            "dash_style": 4,
+            "dash_style_name": "dash",
+            "color_rgb": "14324F"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "C4F3F0"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Partner",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Shared economics with incumbent",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Fastest route to first revenue",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Limited influence on roadmap",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SidebarExhibit",
+          "shape_type": 13,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 660.0,
+            "top_pt": 120.0,
+            "width_pt": 240.0,
+            "height_pt": 180.0,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": []
+        },
+        {
+          "name": "SidebarCaption",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 660.0,
+            "top_pt": 315.0,
+            "width_pt": 240.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Exhibit 2 - route comparison, synthetic",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": true,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterNote",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 502.0,
+            "width_pt": 300.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Meridian Advisory | synthetic corpus",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterPage",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 780.0,
+            "top_pt": 502.0,
+            "width_pt": 120.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "05",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "layout_name": "Title Only",
+      "master_name": "MeridianHouse",
+      "shapes": [
+        {
+          "name": "Title 1",
+          "shape_type": 14,
+          "is_placeholder": true,
+          "ph_type": 1,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 210.0,
+            "width_pt": 840.0,
+            "height_pt": 60.0,
+            "rotation": 0.0,
+            "auto_shape_type": 138,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_lines": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 0.9,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Thank you",
+                  "font": {
+                    "name": "Georgia",
+                    "size_pt": 30.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "14324F"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ClosingRule",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 180.0,
+            "width_pt": 240.0,
+            "height_pt": 6.0,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "1B7F79"
+          },
+          "paragraphs": []
+        },
+        {
+          "name": "ContactPanel",
+          "shape_type": 1,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 360.0,
+            "top_pt": 290.0,
+            "width_pt": 240.0,
+            "height_pt": 140.0,
+            "rotation": 0.0,
+            "auto_shape_type": 5,
+            "adjustments": [
+              0.12
+            ]
+          },
+          "line": {
+            "visible": true,
+            "weight_pt": 1.25,
+            "dash_style": 4,
+            "dash_style_name": "dash",
+            "color_rgb": "14324F"
+          },
+          "fill": {
+            "visible": true,
+            "type": 1,
+            "type_name": "solid",
+            "color_rgb": "DCE3E8"
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Contact",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": true,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 2,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Meridian Advisory",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 3,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "strategy team, synthetic corpus",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            },
+            {
+              "idx": 4,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "meridian.example",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 14.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "20262B"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterNote",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 60.0,
+            "top_pt": 502.0,
+            "width_pt": 300.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 1,
+              "alignment_name": "left",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "Meridian Advisory | synthetic corpus",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FooterPage",
+          "shape_type": 17,
+          "is_placeholder": false,
+          "ph_type": null,
+          "geometry": {
+            "left_pt": 780.0,
+            "top_pt": 502.0,
+            "width_pt": 120.0,
+            "height_pt": 20.6,
+            "rotation": 0.0,
+            "auto_shape_type": 1,
+            "adjustments": []
+          },
+          "line": {
+            "visible": false
+          },
+          "fill": {
+            "visible": false
+          },
+          "paragraphs": [
+            {
+              "idx": 1,
+              "level": 1,
+              "alignment": 3,
+              "alignment_name": "right",
+              "space_before_pt": 0.0,
+              "space_after_pt": 0.0,
+              "space_within": 1.0,
+              "space_within_rule": "multiple",
+              "bullet": {
+                "type": 0,
+                "type_name": "none",
+                "visible": false
+              },
+              "runs": [
+                {
+                  "text": "06",
+                  "font": {
+                    "name": "Calibri",
+                    "size_pt": 11.0,
+                    "bold": false,
+                    "italic": false,
+                    "color_rgb": "3E5C76"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "anomalies": []
+}

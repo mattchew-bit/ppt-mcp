@@ -22,12 +22,20 @@ dependencies = [
     "mcp[cli]>=1.8.0",
     "Pillow>=8.0.0",
     "fonttools>=4.0.0",
+    "pixelmatch>=0.3.0",
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
     "pywin32>=306; sys_platform == 'win32'",
+]
+# Slide rendering: PowerPoint COM (Windows + desktop PowerPoint) or the
+# LibreOffice fallback (rasterized via pypdfium2). compare_renders works
+# everywhere without this extra (pixelmatch + Pillow are core deps).
+render = [
+    "pywin32>=306; sys_platform == 'win32'",
+    "pypdfium2>=4.0.0",
 ]
 
 [project.urls]
